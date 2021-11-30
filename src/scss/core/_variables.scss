@@ -1,11 +1,14 @@
-// fonts
+/* fonts */
+
 $font-primary: 'Open Sans',
 sans-serif;
 $font-secondary: 'Merriweather',
 serif;
 $font-tertiary: 'Montserrat',
 sans-serif;
-// colors
+
+/* colors */
+
 $color-light: #fff;
 $color-dark: #000;
 $color-grey: #6b6b6b;
@@ -16,3 +19,19 @@ $color-orange-light: #f9f4dc;
 $color-green: #438792;
 $color-green-light: #a2deaf;
 $color-green-dark: #114e4e;
+
+/* write media queries with sass mixins */
+
+// how to use: @include tablet { tablet styles here }
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// how to use: @include desktop { desktop styles here }
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
