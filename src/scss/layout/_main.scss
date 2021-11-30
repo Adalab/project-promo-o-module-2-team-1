@@ -13,19 +13,35 @@
         width: 250px;
         height: 63px;
         object-fit: contain;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+        @include tablet{
+            width: 419px;
+            height: 105px;
+            margin-bottom: 20px;
+        }
     }
     &__section1--title{
         font-family: $font-secondary;
         color: $color-orange;
         font-size: 19px;
         margin-bottom: 1%;
+        @include tablet{
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
     }
     &__section1--text{
         color: $color-green-dark;
         font-size: 12.8px;
         font-weight: 600;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+        @include tablet{
+            font-size: 16px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
     }
     &__section2{
         display: flex;
@@ -37,14 +53,26 @@
         border: 2px solid rgba(225, 115, 52, 0.21);
         border-radius: 4px;
         padding: 10px 20px;
+        max-width: 300px;
         width: 100%;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
         &--articleText{
             font-weight: 600;
+            @include tablet{
+                font-size: 16px;
+            }
         }
         &--articleIcon{
             color: $color-orange;
             font-size: 22px;
+            @include tablet{
+                font-size: 28px;
+            }
+        }
+        @include tablet{
+            max-width: 350px;
+            padding: 15px 20px;
+            margin-bottom: 80px;
         }
     }
     &__button{
@@ -56,5 +84,15 @@
         border: 1px solid $color-green;
         border-radius: 21px;
         margin-bottom: 10%;
+        @include tablet{
+            margin-bottom: 0px;
+            position: absolute;
+            bottom: 60px;
+        }
+    }
+    @include tablet{
+        justify-content: center;
+        padding: 0px;
+        position: relative;
     }
 }
