@@ -1,0 +1,85 @@
+.mainbox {
+  width: 100%;
+  background-image: url("../images/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.bannertitle {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 60px;
+  background-color: #099d8d;
+  opacity: 0.95;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navegationmenu {
+  font-family: "Rubik", sans-serif;
+  height: 45px;
+  color: #fff;
+  background-color: #14d9c4;
+  opacity: 0.95;
+  display: flex;
+  flex-grow: initial;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+}
+.navitem1 {
+  flex-direction: row;
+}
+
+.navitem2 {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .mainbox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .bannertitle {
+    width: 50%;
+    font-size: 16px;
+    padding: 15px 45px 15px;
+    height: 60px;
+    justify-content: left;
+  }
+
+  .navegationmenu {
+    justify-content: space-around;
+    background-color: #099d8d;
+    opacity: 0.95;
+    height: 60px;
+    padding: 15px 45px 15px;
+    font-size: 16px;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .navHeader {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .navegationmenu {
+    justify-content: space-around;
+    padding: 15px 130px 15px;
+  }
+}

@@ -1,0 +1,244 @@
+/*Barbara*/
+.mainbox {
+  width: 100%;
+  background-image: url("../images/mainbackgroundimg-cuadrado.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 500px;
+}
+
+.bannertitle {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 60px;
+  background-color: #099d8d;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navegationmenu {
+  font-family: "Rubik", sans-serif;
+  height: 45px;
+  color: #fff;
+  background-color: #14d9c4;
+  display: flex;
+  flex-grow: initial;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+}
+.navitem1 {
+  flex-direction: row;
+}
+
+.navitem2 {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.parrafointro {
+  background-color: #fff;
+  transform: translate(0, -50%);
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+/*Claudia*/
+
+.container {
+  padding: 0 15px;
+  background-color: #fff;
+}
+
+.team {
+  transform: translateY(-10px);
+  padding-top: 15px;
+  background-color: #fff;
+}
+
+.teamtitle {
+  color: #14d9c4;
+  width: 100%;
+  height: 100%;
+  font-family: "rubik", sans-serif;
+  font-size: 24px;
+  line-height: 45px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.teamtext {
+  color: #54585a;
+  font-family: "opensans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+  padding: 0 15px;
+}
+
+p.teamtext {
+  padding-bottom: 30px;
+}
+
+/* Macarena */
+
+.container-sw {
+  width: 100%;
+  padding: 30px 15px 45px;
+  background-color: #f1f1f1;
+}
+
+.text {
+  margin: 15px 0px 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #54585a;
+}
+
+.title {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 2.05;
+  text-align: center;
+  color: var(--brand-color);
+}
+
+.diamond {
+  display: flex;
+  justify-content: center;
+}
+
+.rombo {
+  background: white;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin: auto;
+  transform: translateY(-50%) rotate(45deg);
+}
+/* María */
+
+.containerAboutUs {
+  background: white;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.titleAboutUs {
+  font-family: "Rubik", sans-serif;
+  color: var(--brand-color);
+  font-size: 24px;
+  line-height: 45px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.itemAbout {
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  color: #54585a;
+}
+
+.name {
+  font-size: 20px;
+  color: black;
+  line-height: 45px;
+}
+
+.picture {
+  width: 180px;
+  height: 180px;
+  border: 5px lightgray solid;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* flex */
+
+.containerAboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialMedia {
+  display: inline;
+}
+
+.fab {
+  color: #099d8d;
+  width: fit-content;
+  margin-bottom: 45px;
+  margin-top: 15px;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-top: 2px solid #b8b8b9;
+}
+
+.menu {
+  height: 60px;
+  color: #54585a;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 140%;
+  list-style-type: none;
+  margin: -10px;
+  padding: 5px;
+}
+
+.nombre-grupo {
+  color: #b8b8b9;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 30px 30px;
+}
+
+.lista {
+  text-decoration: none;
+  color: #54585a;
+}
+
+.imagen {
+  width: 115, 9px;
+  height: 45px;
+  margin: 30px;
+}
+
+/*<-- CABECERA TABLET -->*/
+
+@media all and (min-width: 768px) {
+  .navegationmenu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navitem1 {
+    flex-direction: row;
+  }
+}

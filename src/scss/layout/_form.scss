@@ -1,0 +1,181 @@
+.contactsection {
+  padding: 0 15px;
+
+  & .titlecontact {
+    color: var(--brand-color);
+    text-transform: uppercase;
+    font-family: "rubik", sans-serif;
+    font-size: 24px;
+    line-height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  & .textcontact {
+    color: #54585a;
+    font-family: "opensans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    padding-top: 0%;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+      padding: 0 163px 30px;
+      font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0 300px 30px;
+    }
+  }
+
+  & .small {
+    font-size: 12px;
+    color: #54585a;
+    text-align: center;
+    font-family: "opensans", sans-serif;
+    padding-bottom: 58px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+span {
+  color: #14d9c4;
+}
+
+.form {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 3rem;
+
+  @media (min-width: 768px) {
+    padding: 0 163px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 300px;
+  }
+
+  & label {
+    font-size: 14px;
+    font-family: "opensans", sans-serif;
+    color: #54585a;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  & input {
+    height: 45px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 13px;
+    border: 1px solid #b8b8b9;
+    padding-left: 15px;
+  }
+
+  ::placeholder {
+    color: #b8b8b9;
+    font-size: 14px;
+    font-family: "opensans", sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  #email::placeholder {
+    color: #54585a;
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  & #textarea {
+    width: 100%;
+    height: 105px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+    border: 1px solid #b8b8b9;
+    padding-left: 15px;
+  }
+
+  & .send {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    background-color: var(--brand-color);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.name {
+  grid-column: 1/8;
+}
+.email {
+  grid-column: 1/8;
+}
+.phone {
+  grid-column: 1/8;
+}
+.message {
+  grid-column: 1/8;
+}
+.send {
+  grid-column: 1/8;
+}
+
+@media (min-width: 768px) {
+  .name {
+    grid-column: 1/8;
+  }
+  .email {
+    grid-column: 1/8;
+  }
+  .phone {
+    grid-column: 1/8;
+  }
+  .message {
+    grid-column: 1/8;
+  }
+  .send {
+    grid-column: 5/8;
+  }
+}
+
+@media (min-width: 1200px) {
+  .name {
+    grid-column: 1/8;
+  }
+  .email {
+    grid-column: 1/6;
+  }
+  .phone {
+    grid-column: 6/8;
+  }
+  .message {
+    grid-column: 1/8;
+  }
+  .send {
+    grid-column: 5/8;
+  }
+}

@@ -1,0 +1,92 @@
+.container-sw {
+  padding: 30px 15px 45px;
+  background-color: #f1f1f1;
+}
+
+.text {
+  margin: 15px 0px 30px;
+  font-family: "opensans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #54585a;
+}
+
+.title {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 2.05;
+  text-align: center;
+  color: var(--brand-color);
+}
+
+.diamond {
+  display: flex;
+  justify-content: center;
+}
+
+.rombo {
+  background: white;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin: auto;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@media all and (min-width: 768px) {
+  .container-sw {
+    padding: 15px 45px 60px;
+    display: flex;
+
+    & .box-strengths {
+      width: 50%;
+      padding-right: 15px;
+
+      & .title {
+        font-size: 28px;
+      }
+
+      & .text {
+        font-size: 18px;
+      }
+    }
+
+    & .box-weaknesses {
+      width: 50%;
+      padding-left: 15px;
+
+      & .title {
+        font-size: 28px;
+      }
+
+      & .text {
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .box-strengths {
+    padding: 35px;
+    & .title {
+      font-size: 28px;
+    }
+    & .text {
+      font-size: 18px;
+    }
+  }
+  .box-weaknesses {
+    padding: 35px;
+    & .title {
+      font-size: 28px;
+    }
+    & .text {
+      font-size: 18px;
+    }
+  }
+}
