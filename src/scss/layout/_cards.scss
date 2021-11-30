@@ -2,13 +2,60 @@
 .cards {
     // linear gradient style
     background: linear-gradient(#bfcdd0, #dde9ed);
+    padding: 40px 0 40px 40px;
+    display: flex;
+    flex-direction: column;
     &__button {
-        &--reset {}
+        &--reset {
+            display: flex;
+            align-items: center;
+            width: 75px;
+            height: 30px;
+            border-radius: 15px;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color-grey-dark;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid $color-light;
+            padding: 0 10px;
+            .fa-trash-alt {
+                margin-right: 8px;
+            }
+        }
     }
-    &__article {}
-    &__title {}
-    &__subtitle {}
-    &__image {}
+    &__article {
+        width: 240px;
+        min-height: 329px;
+        background-color: $color-light;
+        margin-top: 20px;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    &__title {
+        border-left: 5px solid $color-green;
+        color: $color-green-dark;
+        font-family: $font-tertiary;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        padding-left: 15px;
+        padding-bottom: 4px;
+        margin-top: 20px;
+    }
+    &__subtitle {
+        border-left: 5px solid $color-green;
+        color: $color-grey-dark;
+        font-family: $font-tertiary;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
+    &__image {
+        width: 240px;
+        height: 200px;
+    }
     &__contact {}
     &__item {}
     &__link {
