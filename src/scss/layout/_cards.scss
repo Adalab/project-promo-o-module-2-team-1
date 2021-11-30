@@ -1,0 +1,18 @@
+// cards css styles
+.cards {
+    &__button {
+        &--reset {}
+    }
+    &__article {}
+    &__title {}
+    &__subtitle {}
+    &__image {}
+    &__contact {}
+    &__item {}
+    &__link {
+        &--phone {}
+        &--mail {}
+        &--linkedin {}
+        &--github {}
+    }
+}
