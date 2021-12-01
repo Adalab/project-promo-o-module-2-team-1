@@ -1,3 +1,16 @@
 body {
     font-family: $font-primary;
 }
+
+// profile-cards styles
+.profile-cards {
+    // linear gradient style
+    background: linear-gradient($color-grey-light, $color-light);
+    display: flex;
+    flex-direction: column-reverse;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}
