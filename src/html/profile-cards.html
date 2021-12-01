@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://kit.fontawesome.com/7879d2c79d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/images/favicon.png" />
 </head>
 
 <body>
@@ -18,9 +19,10 @@
     <section class="profile-cards">
         <form class="form" action="">
             <include src="./partials/form-card.html"></include>
-            <include src="./partials/form-design.html"></include>
-            <include src="./partials/form-share.html"></include>
-            <include src="./partials/form-design.html"></include>
+            <div class="form__fieldsets">
+                <include src="./partials/form-design.html"></include>
+                <include src="./partials/form-share.html"></include>
+            </div>
         </form>
     </section>
     <include src="./partials/footer.html"></include>
