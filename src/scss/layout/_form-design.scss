@@ -1,0 +1,56 @@
+
+
+
+.box1_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 0, 0, 0.11);
+    border-bottom: solid 1px grey;
+}
+
+.diseña {
+    color: black;
+    text-transform: uppercase;
+}
+
+
+.palette1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        &__list{
+            display: flex;
+            flex-direction: row;
+               
+            &--color1 {   
+                background-color: $color-green-dark;
+                width: 30px;
+                height: 25px;
+                }
+            &--color2 {   
+                background-color: yellow;
+                width: 30px;
+                height: 25px;
+                }
+            &--color3 {   
+                background-color: brown;
+                width: 30px;
+                height: 25px;
+                }
+            }
+        }
+.palette2__list--color2 {
+   
+    background-color: red;
+    width: 30px;
+    height: 25px;
+}
+
+.palette3__list--color2 {
+   
+    background-color: green;
+    width: 30px;
+    height: 25px;
+}

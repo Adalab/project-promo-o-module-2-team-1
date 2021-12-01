@@ -1,3 +1,4 @@
+
 body {
     font-family: $font-primary;
 }
@@ -13,4 +14,7 @@ body {
         justify-content: space-between;
         padding: 20px 40px;
     }
+}
+.form {
+    width: 100%;
 }
