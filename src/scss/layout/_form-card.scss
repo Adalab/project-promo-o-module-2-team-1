@@ -35,8 +35,13 @@
             text-decoration: none;
             border: 1px solid $color-light;
             padding: 0 10px;
+            background: none;
             .fa-trash-alt {
                 margin-right: 8px;
+            }
+            &:hover {
+                background-color: $color-green-light;
+                color: $color-green-dark;
             }
         }
     }
