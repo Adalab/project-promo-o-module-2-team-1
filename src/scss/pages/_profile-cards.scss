@@ -6,11 +6,8 @@ body {
 .profile-cards {
     // linear gradient style
     background: linear-gradient($color-grey-light, $color-light);
-    display: flex;
-    flex-direction: column-reverse;
+    border-bottom: 1px solid $color-grey-medium;
     @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
         padding: 20px 40px;
     }
 }
