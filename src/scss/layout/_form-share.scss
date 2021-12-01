@@ -5,7 +5,7 @@
       color: red;
     }
     &--arrowUp {
-      color: yellow;
+      color: green;
     }
   }
   &__body {
@@ -23,6 +23,16 @@
       align-items: center;
       margin-bottom: 80px;
       text-decoration: none;
+    }
+    &--done{
+        background-color: hotpink;
+        &--par{
+            color: indigo;
+        }
+        --link{
+            text-decoration: none;
+            color: lawngreen;
+        }
     }
   }
 }
