@@ -1,38 +1,86 @@
 .box3 {
   &__header {
-    color: blue;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: $font-primary;
+    &--box1 {
+      display: flex;
+      flex-direction: row;
+    }
     &--shareIcon {
-      color: red;
+      width: 16px;
+      height: 16px;
+      color: $color-orange;
+    }
+    &--share {
+      display: flex;
+      color: $color-grey-dark;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      align-items: center;
+      justify-content: center;
     }
     &--arrowUp {
-      color: green;
+      color: $color-grey-dark;
+      width: 16px;
+      height: 16px;
     }
   }
   &__body {
-    background-color: salmon;
+    display: flex;
+    justify-content: center;
     &--button {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      background-color: orange;
-      color: purple;
-      width: 184px;
-      height: 45px;
-      border-radius: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-light;
+      background-color: $color-orange;
+      width: 200px;
+      height: 50px;
+      border-radius: 12px;
       display: grid;
       justify-content: center;
       align-items: center;
       margin-bottom: 80px;
       text-decoration: none;
     }
-    &--done{
-        background-color: hotpink;
-        &--par{
-            color: indigo;
-        }
-        --link{
-            text-decoration: none;
-            color: lawngreen;
-        }
+    &--done {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--par {
+        color: $color-grey-dark;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      &--link {
+        text-decoration: none;
+        color: $color-orange;
+        font-size: 16px;
+      }
+      &--twitter {
+        font-size: 14px;
+       line-height: 20px;
+        color: $color-light;
+        background-color:#00a0f5;
+        width: 180px;
+        height: 30px;
+        border-radius: 3px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        text-decoration: none;
+      }
     }
   }
 }
+/*falta:
+-lineas grises separatorias
+-dar formato a la linea del header/el comparte
+-dar márgenes y padding; pendiente de las otras compañeras
+-dar sombra a los botones
+-añadir icono de twitter y crear tarjeta (pero eso para la segunda corrección de css tras pasar por javascript, no?)*/
