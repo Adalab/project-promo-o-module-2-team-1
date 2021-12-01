@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media(min-width:768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__text {
+    padding: 18px 0px 12px;
+    font-size: 14px;
+    color: $color-grey;
+    font-family: $font-primary;
+    opacity: 0.5;
+    @media(min-width:768px) {
+      margin-left: 40px;
+    }
+  }
+  &__img {
+    width: 104px;
+    height: 40px;
+    @media(min-width:768px) {
+      margin-right: 40px;
+    }
+  }
+}
