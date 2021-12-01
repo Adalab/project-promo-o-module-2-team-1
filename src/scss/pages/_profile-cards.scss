@@ -13,5 +13,22 @@ body {
 }
 
 .form {
-    width: 100%;
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @include desktop {
+        width: 944px;
+        margin: 0 auto;
+    }
+    &__fieldsets {
+        margin: 30px 20px;
+        @include tablet {
+            width: 50%;
+            margin: 0;
+        }
+        @include desktop {
+            width: 329px;
+        }
+    }
 }

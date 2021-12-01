@@ -2,17 +2,24 @@
 .cards {
     // linear gradient style
     background: linear-gradient(#bfcdd0, #dde9ed);
+    padding: 40px 0;
     display: flex;
-    flex-direction: column;
-    padding: 40px;
+    justify-content: center;
+    align-items: center;
     @include tablet {
+        width: 50%;
         border-radius: 6px;
-        width: 330px;
-        display: flex;
+        margin-left: 30px;
     }
     @include desktop {
         width: 585px;
-        align-items: center;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+        @include tablet {}
+        @include desktop {}
     }
     &__button {
         &--reset {
@@ -35,7 +42,6 @@
     }
     &__article {
         width: 240px;
-        min-height: 329px;
         background-color: $color-light;
         margin-top: 20px;
         border-radius: 2px;
