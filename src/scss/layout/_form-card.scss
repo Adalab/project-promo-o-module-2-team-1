@@ -40,8 +40,9 @@
                 margin-right: 8px;
             }
             &:hover {
-                background-color: $color-green-light;
-                color: $color-green-dark;
+                background-color: $color-orange;
+                color: $color-light;
+                border: none;
             }
         }
     }
@@ -50,7 +51,7 @@
         background-color: $color-light;
         margin-top: 20px;
         border-radius: 2px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
     &__title {
         border-left: 5px solid $color-green;
@@ -76,6 +77,7 @@
         width: 240px;
         height: 200px;
     }
+    /*
     &__contact {}
     &__item {}
     &__link {
@@ -84,4 +86,5 @@
         &--linkedin {}
         &--github {}
     }
+    */
 }
