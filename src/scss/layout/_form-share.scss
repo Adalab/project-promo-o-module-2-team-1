@@ -1,4 +1,5 @@
 .box3 {
+  border-bottom: #d8d8d8 solid 1px;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -31,6 +32,7 @@
   &__body {
     display: flex;
     justify-content: center;
+    border-bottom: #d8d8d8 solid 1px;
     &--button {
       font-size: 18px;
       font-weight: 600;
@@ -43,14 +45,33 @@
       display: grid;
       justify-content: center;
       align-items: center;
-      margin-bottom: 80px;
+
+      margin-top: 35px;
+      margin-bottom: 35px;
       text-decoration: none;
     }
+     /*boton en gris de cuando está preparado el boton
+    &--button {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-light;
+      background-color: #d5d5d5;
+      width: 200px;
+      height: 50px;
+      border-radius: 12px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    margin-top: 35px;
+      margin-bottom: 35px;
+      text-decoration: none;}*/
     &--done {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 35px;
       &--par {
         color: $color-grey-dark;
         font-size: 18px;
@@ -63,13 +84,13 @@
       }
       &--twitter {
         font-size: 14px;
-       line-height: 20px;
+        line-height: 20px;
         color: $color-light;
-        background-color:#00a0f5;
+        background-color: #00a0f5;
         width: 180px;
         height: 30px;
         border-radius: 3px;
-        display: grid;
+        display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
@@ -79,8 +100,9 @@
   }
 }
 /*falta:
--lineas grises separatorias
--dar formato a la linea del header/el comparte
+-hay que separar el icono de twitter de las letras
+-dar formato a la linea del header/el comparte - separar icono de palabra comparte
 -dar márgenes y padding; pendiente de las otras compañeras
 -dar sombra a los botones
--añadir icono de twitter y crear tarjeta (pero eso para la segunda corrección de css tras pasar por javascript, no?)*/
+*/
+
