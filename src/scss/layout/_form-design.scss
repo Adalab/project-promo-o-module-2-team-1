@@ -4,22 +4,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(255, 0, 0, 0.11);
     border-bottom: solid 1px grey;
 }
-
+.palette_text {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $color-grey-dark;
+}
 .diseña {
-    color: black;
+    color: $color-grey-dark;
+    font-weight: bold;
     text-transform: uppercase;
 }
-
-.palette1{
+.palette {
+    margin-bottom: 20px;
+}
+.palette1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.palette1_label{
     display: flex;
     flex-direction: row;
     align-items: center;
         &__list{
             display: flex;
             flex-direction: row;
+            margin-left: 10px;
                
             &--color1 {   
                 background-color: $color-green-dark;
@@ -27,12 +39,12 @@
                 height: 25px;
                 }
             &--color2 {   
-                background-color: yellow;
+                background-color: $color-green;
                 width: 30px;
                 height: 25px;
                 }
             &--color3 {   
-                background-color: brown;
+                background-color: $color-green-light;
                 width: 30px;
                 height: 25px;
                 }
@@ -45,19 +57,20 @@
         &__list{
             display: flex;
             flex-direction: row;
+            margin-left: 10px;
                
             &--color1 {   
-                background-color: $color-green-dark;
+                background-color: $color-passion-red;
                 width: 30px;
                 height: 25px;
                 }
             &--color2 {   
-                background-color: yellow;
+                background-color: $color-rusty-red;
                 width: 30px;
                 height: 25px;
                 }
             &--color3 {   
-                background-color: brown;
+                background-color: $color-tomato;
                 width: 30px;
                 height: 25px;
                 }
@@ -71,21 +84,35 @@
         &__list{
             display: flex;
             flex-direction: row;
+            margin-left: 10px;
                
             &--color1 {   
-                background-color: $color-green-dark;
+                background-color: $color-blue-green;
                 width: 30px;
                 height: 25px;
                 }
             &--color2 {   
-                background-color: yellow;
+                background-color: $color-orange-light;
                 width: 30px;
                 height: 25px;
                 }
             &--color3 {   
-                background-color: brown;
+                background-color: $color-grey-blue-light;
                 width: 30px;
                 height: 25px;
                 }
             }
         }
+
+.design {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.design_icon {
+    color: $color-tomato;
+
+
+}
