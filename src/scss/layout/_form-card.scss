@@ -17,7 +17,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-        line-height: 0;
         @include tablet {}
         @include desktop {}
     }
@@ -76,12 +75,17 @@
     &__image {
         width: 240px;
         height: 200px;
+        background: url('http://www.fillmurray.com/240/200');
+        background-size: cover;
+        background-position: center;
     }
     &__contact {
         display: flex;
-        margin-top: 10px 20px;
+        margin: 10px 20px;
     }
-    &__item {}
+    &__item {
+        margin-right: 10px;
+    }
     &__link {
         display: flex;
         justify-content: center;
@@ -92,9 +96,9 @@
         height: 32px;
         border-radius: 50%;
         border: 2px solid $color-green-light;
-        &--mobile {}
-        &--mail {}
-        &--linkedin {}
-        &--github {}
+        &:hover {
+            background-color: $color-green-light;
+            color: $color-green-dark;
+        }
     }
 }
