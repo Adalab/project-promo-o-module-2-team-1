@@ -77,14 +77,24 @@
         width: 240px;
         height: 200px;
     }
-    /*
-    &__contact {}
+    &__contact {
+        display: flex;
+        margin-top: 10px 20px;
+    }
     &__item {}
     &__link {
-        &--phone {}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $color-green-dark;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid $color-green-light;
+        &--mobile {}
         &--mail {}
         &--linkedin {}
         &--github {}
     }
-    */
 }
