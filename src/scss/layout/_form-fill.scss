@@ -1,4 +1,3 @@
-
 .box2 {
     display: flex;
     flex-direction: row;
@@ -17,7 +16,6 @@
     color: $color-orange;
 }
 
-
 .form-fill {
     display: flex;
     flex-direction: column;
@@ -30,6 +28,7 @@ label {
     font-size: 14px;
     color: $color-green-dark;
 }
+
 input {
     margin-bottom: 20px;
     height: 30px;
@@ -42,6 +41,7 @@ input {
     margin-bottom: 20px;
     
 }
+
 .insertImg {
     width: 140px;
     height: 30px;
