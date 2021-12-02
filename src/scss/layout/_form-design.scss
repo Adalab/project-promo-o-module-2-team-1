@@ -1,6 +1,4 @@
 
-
-
 .box1_header {
     width: 100%;
     display: flex;
@@ -14,7 +12,6 @@
     color: black;
     text-transform: uppercase;
 }
-
 
 .palette1{
     display: flex;
@@ -41,16 +38,54 @@
                 }
             }
         }
-.palette2__list--color2 {
-   
-    background-color: red;
-    width: 30px;
-    height: 25px;
-}
+.palette2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        &__list{
+            display: flex;
+            flex-direction: row;
+               
+            &--color1 {   
+                background-color: $color-green-dark;
+                width: 30px;
+                height: 25px;
+                }
+            &--color2 {   
+                background-color: yellow;
+                width: 30px;
+                height: 25px;
+                }
+            &--color3 {   
+                background-color: brown;
+                width: 30px;
+                height: 25px;
+                }
+            }
+        }
 
-.palette3__list--color2 {
-   
-    background-color: green;
-    width: 30px;
-    height: 25px;
-}
+.palette3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        &__list{
+            display: flex;
+            flex-direction: row;
+               
+            &--color1 {   
+                background-color: $color-green-dark;
+                width: 30px;
+                height: 25px;
+                }
+            &--color2 {   
+                background-color: yellow;
+                width: 30px;
+                height: 25px;
+                }
+            &--color3 {   
+                background-color: brown;
+                width: 30px;
+                height: 25px;
+                }
+            }
+        }
