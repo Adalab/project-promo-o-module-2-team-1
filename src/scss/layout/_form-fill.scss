@@ -1,0 +1,29 @@
+.form-fill {
+    display: flex;
+    flex-direction: column;
+}
+ 
+label {
+    margin-bottom: 7px;
+}
+input {
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.insertImg {
+    width: 140px;
+    height: 30px;
+    background-color: orange;
+}
+
+.whitecheck {
+    width: 30px;
+    height: 30px;
+    border: solid 2px;
+    margin-left: 20px;
+}
+.containerImg {
+    display: flex;
+    
+}
