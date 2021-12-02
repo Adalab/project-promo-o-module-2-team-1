@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: solid 1px grey;
+    border-bottom: solid 1px $color-grey-medium;
 }
 .palette_text {
     text-transform: uppercase;
@@ -112,7 +112,5 @@
 
 }
 .design_icon {
-    color: $color-tomato;
-
-
+    color: $color-orange;
 }
