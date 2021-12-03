@@ -45,12 +45,12 @@
       display: grid;
       justify-content: center;
       align-items: center;
-
+      border: none;
       margin-top: 35px;
       margin-bottom: 35px;
       text-decoration: none;
     }
-     /*boton en gris de cuando está preparado el boton
+    /*boton en gris de cuando está preparado el boton
     &--button {
       font-size: 18px;
       font-weight: 600;
@@ -63,6 +63,7 @@
       display: grid;
       justify-content: center;
       align-items: center;
+      border: none;
     margin-top: 35px;
       margin-bottom: 35px;
       text-decoration: none;}*/
@@ -106,4 +107,3 @@
 -dar sombra a los botones
 -diseño responsive!!
 */
-
