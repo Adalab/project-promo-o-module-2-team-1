@@ -1,14 +1,16 @@
 .footer {
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: solid 1px $color-grey-medium;
   @media(min-width:768px) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   &__text {
-    padding: 18px 0px 12px;
     font-size: 14px;
     color: $color-grey;
     font-family: $font-primary;
@@ -20,8 +22,9 @@
   &__img {
     width: 104px;
     height: 40px;
+    margin-top: 12px;
     @media(min-width:768px) {
-      margin-right: 40px;
+      margin: 40px;
     }
   }
 }
