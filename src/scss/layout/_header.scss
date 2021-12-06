@@ -1,11 +1,16 @@
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 111px;
-    @media(min-width: 768px) {
-        justify-content: flex-start;
+    &__wrapper {
+        height: 111px;
+        display: flex;
+        align-items: center;
         margin-left: 40px;
+        @include desktop {
+            width: 944px;
+            margin: 0 auto;
+        }
+    }
+    &__link {
+        line-height: 0;
     }
     &__img {
         width: 201px;

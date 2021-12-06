@@ -16,9 +16,9 @@
 <body>
 
     <header class="header">
-
-        <a href="./"><img class="header__img" src="./assets/images/logo-awesome-profile-cards.svg" alt="logo awesome profile cards"></a>
-
+        <div class="header__wrapper">
+            <a class="header__link" href="./" title="Awesome profile-cards"><img class="header__img" src="./assets/images/logo-awesome-profile-cards.svg" alt="Logo Awesome profile-cards"></a>
+        </div>
     </header>
     <section class="profile-cards">
         <form class="form" action="">
@@ -52,7 +52,7 @@
                     <legend class="box1_header">
                         <i class="far fa-object-ungroup design_icon"></i>
                         <h2 class="diseña">Diseña</h2>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-up design_arrow"></i>
                     </legend>
                     <section class="design">
                         <p class="palette_text">Colores</p>
@@ -135,24 +135,27 @@
                     </legend>
 
                     <div class="box3__body">
-                        <a href="" class="box3__body--button" title="Click aquí para comenzar">Crear tarjeta</a>
+                        <button href="" class="box3__body--button" title="Click aquí para comenzar">Crear tarjeta</button>
                     </div>
                     <!--   boton en gris de que está preparada la tarjeta
                          <div class="box3__body">
-                        <a href="" class="box3__body--button" title="Click aquí para comenzar"><i class="far fa-id-card">Crear tarjeta</i></a>
+                        <button href="" class="box3__body--button" title="Click aquí para comenzar"><i class="far fa-id-card">Crear tarjeta</i></button>
                 </div> -->
                     <div class="box3__body--done">
                         <p class="box3__body--done--par">La tarjeta ha sido creada:</p>
                         <a href="" class="box3__body--done--link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
-                        <a href="" class="box3__body--done--twitter" title="Compartir en Twitter"><i class="fab fa-twitter"></i>Compartir en twitter</a>
+                        <a href="" class="box3__body--done--twitter" title="Compartir en Twitter"><i
+                                class="fab fa-twitter"></i>Compartir en twitter</a>
                     </div>
                 </fieldset>
             </div>
         </form>
     </section>
     <footer class="footer">
-        <p class="footer__text"> Awesome profile cards &copy; 2021</p>
-        <a href="https://adalab.es/" target="_blank"><img class="footer__img" src="./assets/images/logo-adalab.png" alt="Logo Adalab"></a>
+        <div class="footer__wrapper">
+            <p class="footer__text">Awesome profile-cards &copy; 2021</p>
+            <a class="footer__link" href="https://adalab.es/" target="_blank" title="Adalab"><img class="footer__img" src="./assets/images/logo-adalab.png" alt="Logo Adalab"></a>
+        </div>
     </footer>
     <script src="./assets/js/main.js"></script>
 </body>
