@@ -1,6 +1,6 @@
 .mainIndex {
     background-color: $color-grey-light;
-    height: 80vh;
+    height: calc(100vh - 111px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +8,9 @@
     text-align: center;
     font-family: $font-primary;
     position: relative;
+    @include tablet {
+        height: calc(100vh - 61px);
+    }
     &__img {
         width: 250px;
         height: 63px;
@@ -82,7 +85,7 @@
         background-color: $color-green;
         border: 1px solid $color-green;
         border-radius: 21px;
-        margin-bottom: 10%;
+        margin-bottom: 30px;
         text-decoration: none;
         position: absolute;
         bottom: 0;
