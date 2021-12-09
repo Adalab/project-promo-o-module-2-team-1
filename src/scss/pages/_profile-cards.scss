@@ -2,9 +2,7 @@
     font-family: $font-primary;
 }
 
-// profile-cards styles
 .profile-cards {
-    // linear gradient style
     background: linear-gradient($color-grey-light, $color-light);
     @include tablet {
         padding: 20px 40px;
@@ -21,7 +19,7 @@
         margin: 0 auto;
     }
     &__fieldsets {
-        margin: 30px 20px;
+        margin: 20px 20px 30px;
         @include tablet {
             width: 50%;
             margin: 0;
@@ -29,5 +27,39 @@
         @include desktop {
             width: 329px;
         }
+    }
+}
+
+.box {
+    border-bottom: solid 1px $color-grey-medium;
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 10px;
+        color: $color-orange;
+    }
+    &__title {
+        color: $color-grey-dark;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__arrow {
+        color: $color-grey-dark;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

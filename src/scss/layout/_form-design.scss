@@ -1,121 +1,64 @@
+.palettes {
+    &__title {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $color-grey-dark;
+        margin-left: 20px;
+    }
+    &__option {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
 
-.box1_header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: solid 1px $color-grey-medium;
-}
-.palette_text {
-    text-transform: uppercase;
-    font-size: 14px;
-    color: $color-grey-dark;
-}
-.diseña {
-    color: $color-grey-dark;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 18px;
-}
 .palette {
-    margin-bottom: 5px;
+    &__label {
+        position: relative;
+        transform: translate(0, -6px);
+    }
+    &__list {
+        display: flex;
+        margin-left: 10px;
+    }
+    &__color {
+        width: 30px;
+        height: 25px;
+    }
 }
+
 .palette1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    &--color1 {
+        background-color: $color-green-dark;
+    }
+    &--color2 {
+        background-color: $color-green;
+    }
+    &--color3 {
+        background-color: $color-green-light;
+    }
 }
-.palette1_label{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        &__list{
-            display: flex;
-            flex-direction: row;
-            margin-left: 10px;
-               
-            &--color1 {   
-                background-color: $color-green-dark;
-                width: 30px;
-                height: 25px;
-                }
-            &--color2 {   
-                background-color: $color-green;
-                width: 30px;
-                height: 25px;
-                }
-            &--color3 {   
-                background-color: $color-green-light;
-                width: 30px;
-                height: 25px;
-                }
-            }
-        }
-.palette2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        &__list{
-            display: flex;
-            flex-direction: row;
-            margin-left: 10px;
-               
-            &--color1 {   
-                background-color: $color-passion-red;
-                width: 30px;
-                height: 25px;
-                }
-            &--color2 {   
-                background-color: $color-rusty-red;
-                width: 30px;
-                height: 25px;
-                }
-            &--color3 {   
-                background-color: $color-tomato;
-                width: 30px;
-                height: 25px;
-                }
-            }
-        }
 
-.palette3{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        &__list{
-            display: flex;
-            flex-direction: row;
-            margin-left: 10px;
-               
-            &--color1 {   
-                background-color: $color-blue-green;
-                width: 30px;
-                height: 25px;
-                }
-            &--color2 {   
-                background-color: $color-orange-light;
-                width: 30px;
-                height: 25px;
-                }
-            &--color3 {   
-                background-color: $color-grey-blue-light;
-                width: 30px;
-                height: 25px;
-                }
-            }
-        }
-
-.design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
-
+.palette2 {
+    &--color1 {
+        background-color: $color-passion-red;
+    }
+    &--color2 {
+        background-color: $color-rusty-red;
+    }
+    &--color3 {
+        background-color: $color-tomato;
+    }
 }
-.design_icon {
-    color: $color-orange;
-    size: 20px;
-}
-.design_arrow {
-   color:$color-grey-dark;
+
+.palette3 {
+    &--color1 {
+        background-color: $color-blue-green;
+    }
+    &--color2 {
+        background-color: $color-orange-light;
+    }
+    &--color3 {
+        background-color: $color-grey-blue-light;
+    }
 }
