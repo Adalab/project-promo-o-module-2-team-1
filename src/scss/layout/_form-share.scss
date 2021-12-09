@@ -1,54 +1,38 @@
-.box3 {
-  border-bottom: #d8d8d8 solid 1px;
-  &__header {
+.share {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-family: $font-primary;
-    &--box1 {
-      display: flex;
-      flex-direction: row;
+    flex-direction: column;
+    border-bottom: 1px solid $color-grey-medium;
+    &__main {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $color-grey-medium;
     }
-    &--shareIcon {
-      width: 16px;
-      height: 16px;
-      color: $color-orange;
-    }
-    &--share {
-      display: flex;
-      color: $color-grey-dark;
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 600;
-      align-items: center;
-      justify-content: center;
-    }
-    &--arrowUp {
-      color: $color-grey-dark;
-      width: 16px;
-      height: 16px;
-    }
-  }
-  &__body {
-    display: flex;
-    justify-content: center;
-    border-bottom: #d8d8d8 solid 1px;
-    &--button {
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $color-light;
-      background-color: $color-orange;
-      width: 200px;
-      height: 50px;
-      border-radius: 12px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      border: none;
-      margin-top: 35px;
-      margin-bottom: 35px;
-      text-decoration: none;
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        border-radius: 12px;
+        font-size: 18px;
+        color: $color-light;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        background-color: $color-orange;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        .fa-address-card {
+            margin-right: 9px;
+        }
+        &:hover {
+            background-color: $color-green;
+        }
+        &--disabled {
+            background-color: $color-grey-medium2;
+            box-shadow: none;
+        }
     }
     /*boton en gris de cuando está preparado el boton
     &--button {
@@ -67,23 +51,24 @@
     margin-top: 35px;
       margin-bottom: 35px;
       text-decoration: none;}*/
-    &--done {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 35px;
-      &--par {
+    &__done {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+    }
+    &__text {
         color: $color-grey-dark;
         font-size: 18px;
         font-weight: 600;
-      }
-      &--link {
+    }
+    &__link {
         text-decoration: none;
         color: $color-orange;
         font-size: 16px;
-      }
-      &--twitter {
+    }
+    &__twitter {
         font-size: 14px;
         line-height: 20px;
         color: $color-light;
@@ -96,14 +81,5 @@
         align-items: center;
         margin-bottom: 50px;
         text-decoration: none;
-      }
     }
-  }
 }
-/*falta:
--hay que separar el icono de twitter de las letras
--dar formato a la linea del header/el comparte - separar icono de palabra comparte
--dar márgenes y padding; pendiente de las otras compañeras
--dar sombra a los botones
--diseño responsive!!
-*/

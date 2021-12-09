@@ -1,23 +1,26 @@
-<fieldset class="box3">
-    <legend class="box3__header">
-        <span class="box3__header--box1">
-            <i class="fas fa-share-alt box3__header--shareIcon"></i>
-            <h2 class="box3__header--share">Comparte</h2>
-        </span>
-        <span class="box3__header--box2"><i class="fas fa-chevron-up box3__header--arrowUp"></i></span>
+<!-- share form html structure -->
+<fieldset class="box">
+    <legend class="box__header">
+        <div class="box__wrapper">
+            <i class="fas fa-share-alt box__icon"></i>
+            <h2 class="box__title">Comparte</h2>
+        </div>
+        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
     </legend>
 
-    <div class="box3__body">
-        <button href="" class="box3__body--button" title="Click aquí para comenzar">Crear tarjeta</button>
-    </div>
-    <!--   boton en gris de que está preparada la tarjeta
-         <div class="box3__body">
-        <button href="" class="box3__body--button" title="Click aquí para comenzar"><i class="far fa-id-card">Crear tarjeta</i></button>
-</div> -->
-    <div class="box3__body--done">
-        <p class="box3__body--done--par">La tarjeta ha sido creada:</p>
-        <a href="" class="box3__body--done--link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
-        <a href="" class="box3__body--done--twitter" title="Compartir en Twitter"><i
-                class="fab fa-twitter"></i>Compartir en twitter</a>
-    </div>
+    <section class="box__main share js-box__main js-share">
+        <div class="share__main">
+            <button class="share__button" type="submit"><i class="far fa-address-card"></i>Crear
+                tarjeta</button>
+            <button class="share__button share__button--disabled hidden" type="submit"><i
+                    class="far fa-address-card"></i>Crear tarjeta</button>
+        </div>
+
+        <div class="share__done">
+            <p class="share__text">La tarjeta ha sido creada:</p>
+            <a href="#" class="share__link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
+            <a href="#" class="share__twitter" title="Compartir en Twitter"><i class="fab fa-twitter"></i>Compartir en
+                twitter</a>
+        </div>
+    </section>
 </fieldset>
