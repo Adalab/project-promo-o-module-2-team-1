@@ -55,6 +55,7 @@
     }
     &__arrow {
         color: $color-grey-dark;
+        cursor: pointer;
     }
     &__main {
         display: flex;
@@ -62,4 +63,8 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+}
+
+.hidden {
+    display: none;
 }
