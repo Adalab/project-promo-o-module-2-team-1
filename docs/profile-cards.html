@@ -49,43 +49,51 @@
             </section>
             <div class="form__fieldsets">
                 <fieldset class="box1">
-                    <legend class="box1_header">
-                        <i class="far fa-object-ungroup design_icon"></i>
-                        <h2 class="diseña">Diseña</h2>
-                        <i class="fas fa-chevron-up design_arrow"></i>
+                    <legend class="box__header">
+                        <div class="box__wrapper">
+                            <i class="far fa-object-ungroup box__icon"></i>
+                            <h2 class="box__title">Diseña</h2>
+                        </div>
+
+                        <i class="fas fa-chevron-up box__arrow"></i>
                     </legend>
-                    <section class="design">
-                        <p class="palette_text">Colores</p>
-                        <div class="choose">
-                            <div class="palette palette1">
-                                <input type="radio" id="palette1" name="fav_color" value="palette1">
-                                <label for="palette1" class="palette1_label">
-                                    <ul class="palette1_label__list">
-                                        <li class="palette1_label__list--color1"></li>
-                                        <li class="palette1_label__list--color2"></li>
-                                        <li class="palette1_label__list--color3"></li>
+
+                    <section class="box__main palettes">
+                        <p class="palettes__title">Colores</p>
+
+                        <div class="palettes__wrapper">
+                            <div class="palettes__option palette">
+                                <input type="radio" id="palette1" name="palette" class="palette__input" />
+
+                                <label for="palette1" class="palette__label">
+                                    <ul class="palette__list">
+                                        <li class="palette__color palette1--color1"></li>
+                                        <li class="palette__color palette1--color2"></li>
+                                        <li class="palette__color palette1--color3"></li>
                                     </ul>
                                 </label>
                             </div>
 
-                            <div class="palette palette2">
-                                <input type="radio" id="palette2" name="fav_color" value="palette2">
-                                <label for="palette2" class="palette2">
-                                    <ul class="palette2__list">
-                                        <li class="palette2__list--color1"></li>
-                                        <li class="palette2__list--color2"></li>
-                                        <li class="palette2__list--color3"></li>
+                            <div class="palettes__option palette">
+                                <input type="radio" id="palette2" name="palette" class="palette__input" />
+
+                                <label for="palette2" class="palette__label">
+                                    <ul class="palette__list">
+                                        <li class="palette__color palette2--color1"></li>
+                                        <li class="palette__color palette2--color2"></li>
+                                        <li class="palette__color palette2--color3"></li>
                                     </ul>
                                 </label>
                             </div>
 
-                            <div class="palette palette3">
-                                <input type="radio" id="palette3" name="fav_color" value="palette3">
-                                <label for="palette3" class="palette3">
-                                    <ul class="palette3__list">
-                                        <li class="palette3__list--color1"></li>
-                                        <li class="palette3__list--color2"></li>
-                                        <li class="palette3__list--color3"></li>
+                            <div class="palettes__option palette">
+                                <input type="radio" id="palette3" name="palette" class="palette__input" />
+
+                                <label for="palette3 " class="palette__label">
+                                    <ul class="palette__list">
+                                        <li class="palette__color palette3--color1"></li>
+                                        <li class="palette__color palette3--color2"></li>
+                                        <li class="palette__color palette3--color3"></li>
                                     </ul>
                                 </label>
                             </div>
