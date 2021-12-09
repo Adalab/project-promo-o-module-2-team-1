@@ -52,16 +52,16 @@
             </section>
             <div class="form__fieldsets">
                 <!-- design form html structure -->
-                <fieldset class="box">
+                <fieldset class="box design js-design">
                     <legend class="box__header">
                         <div class="box__wrapper">
                             <i class="far fa-object-ungroup box__icon"></i>
                             <h2 class="box__title">Diseña</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
+                        <i class="fas fa-chevron-down box__arrow js-arrow"></i>
                     </legend>
 
-                    <section class="box__main design js-box__main js-design hidden">
+                    <section class="box__main design__section js-design-section hidden">
                         <p class="design__text">Colores</p>
 
                         <div class="design__wrapper">
@@ -104,16 +104,16 @@
                     </section>
                 </fieldset>
                 <!-- fill form html structure -->
-                <fieldset class="box">
+                <fieldset class="box fill js-fill">
                     <legend class="box__header">
                         <div class="box__wrapper">
                             <i class="far fa-keyboard box__icon"></i>
                             <h2 class="box__title">Rellena</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
+                        <i class="fas fa-chevron-down box__arrow js-arrow"></i>
                     </legend>
 
-                    <section class="box__main fill js-box__main js-fill">
+                    <section class="box__main fill__section js-fill-section">
                         <label class="fill__label" for="name">Nombre completo</label>
                         <input class="fill__input" type="text" name="name" id="name" placeholder="Ej: Sally Jill" />
 
@@ -140,16 +140,16 @@
                     </section>
                 </fieldset>
                 <!-- share form html structure -->
-                <fieldset class="box">
+                <fieldset class="box share js-share">
                     <legend class="box__header">
                         <div class="box__wrapper">
                             <i class="fas fa-share-alt box__icon"></i>
                             <h2 class="box__title">Comparte</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
+                        <i class="fas fa-chevron-down box__arrow js-arrow"></i>
                     </legend>
 
-                    <section class="box__main share js-box__main js-share">
+                    <section class="box__main share__section js-share-section">
                         <div class="share__main">
                             <button class="share__button" type="submit"><i class="far fa-address-card"></i>Crear
                                 tarjeta</button>
@@ -159,9 +159,9 @@
 
                         <div class="share__done">
                             <p class="share__text">La tarjeta ha sido creada:</p>
-                            <a href="#" class="share__link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
-                            <a href="#" class="share__twitter" title="Compartir en Twitter"><i class="fab fa-twitter"></i>Compartir en
-                                twitter</a>
+                            <a class="share__link" href="#">random text meanwhile</a>
+                            <button class="share__button share__button--twitter"><i class="fab fa-twitter"></i>Compartir en
+                                twitter</button>
                         </div>
                     </section>
                 </fieldset>
