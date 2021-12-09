@@ -7,13 +7,13 @@ const boxMainElement = document.querySelector('.js-box__main');
 boxArrowElement.addEventListener('click', handlerArrowClick);
 
 function handlerArrowClick() {
-    if (arrowElement.classList.contains('fa-chevron-up')) {
-        arrowElement.classList.remove('fa-chevron-up');
-        arrowElement.classList.add('fa-chevron-down');
+    if (boxArrowElement.classList.contains('fa-chevron-up')) {
+        boxArrowElement.classList.remove('fa-chevron-up');
+        boxArrowElement.classList.add('fa-chevron-down');
         showContent();
     } else {
-        arrowElement.classList.remove('fa-chevron-down');
-        arrowElement.classList.add('fa-chevron-up');
+        boxArrowElement.classList.remove('fa-chevron-down');
+        boxArrowElement.classList.add('fa-chevron-up');
         showContent();
     }
 }
