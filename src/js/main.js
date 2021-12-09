@@ -1,36 +1,56 @@
 'use strict';
 
-// obtener elemento html con clase .js-box__arrow (flecha)
-const boxArrowElement = document.querySelector('.js-box__arrow');
-
-// escuchar y manejar evento click
-boxArrowElement.addEventListener('click', handlerArrowClick);
-
-function handlerArrowClick(event) {
-  // función: cambiar icono flecha
-  changeBoxArrow(event.currentTarget);
-
-  // función: mostrar/ocultar contenido
-  showBoxMain();
+// obtener elemento html a partir de la clase css
+function getElement(selector) {
+  const element = document.querySelector(selector);
+  return element;
 }
 
-function changeBoxArrow(arrowElement) {
-  // si contiene el icono flecha-arriba
-  if (arrowElement.classList.contains('fa-chevron-up')) {
-    // añadir icono flecha-abajo y borrar icono flecha-arriba
-    arrowElement.classList.add('fa-chevron-down');
-    arrowElement.classList.remove('fa-chevron-up');
-  } else {
-    // añadir icono flecha-arriba y borrar icono flecha-abajo
-    arrowElement.classList.add('fa-chevron-up');
-    arrowElement.classList.remove('fa-chevron-down');
+// obtener elementos html (fieldsets)
+const designElement = getElement('.js-design');
+
+// escuchar y manejar eventos click
+designElement.addEventListener('click', handlerArrowClick);
+
+function handlerArrowClick(event) {
+  // elemento clickado (flecha)
+  const arrowElement = event.target;
+  // elemento escuchado (fieldset)
+  const fieldsetElement = event.currentTarget;
+
+  // si el elemento clickado es una flecha
+  if (arrowElement.classList.contains('js-arrow')) {
+    // cambiar icono flecha
+    changeArrowIcon(arrowElement);
+
+    // mostrar/ocultar sección
+    showSection(fieldsetElement);
   }
 }
 
-function showBoxMain() {
-  // obtener elemento html con clase .js-box__main (contenido)
-  const boxMainElement = document.querySelector('.js-box__main');
+// cambiar icono flecha
+function changeArrowIcon(arrow) {
+  if (arrow.classList.contains('fa-chevron-up')) {
+    arrow.classList.add('fa-chevron-down');
+    arrow.classList.remove('fa-chevron-up');
+  } else {
+    arrow.classList.add('fa-chevron-up');
+    arrow.classList.remove('fa-chevron-down');
+  }
+}
 
-  // eliminar/añadir clase .hidden
-  boxMainElement.classList.toggle('hidden');
+// mostrar/ocultar sección (diseña, rellena o comparte)
+function showSection(element) {
+  if (element.classList.contains('js-design')) {
+    changeVisibility('.js-design-section');
+  }
+}
+
+// cambiar visibilidad de un elemento
+function changeVisibility(selector) {
+  // obtener elemento html a partir de la clase css
+  const element = getElement(selector);
+
+  // borrar/añadir clase .hidden
+  element.classList.toggle('hidden');
 }

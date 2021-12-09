@@ -1,14 +1,14 @@
 <!-- share form html structure -->
-<fieldset class="box">
+<fieldset class="box share js-share">
     <legend class="box__header">
         <div class="box__wrapper">
             <i class="fas fa-share-alt box__icon"></i>
             <h2 class="box__title">Comparte</h2>
         </div>
-        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
+        <i class="fas fa-chevron-down box__arrow js-arrow"></i>
     </legend>
 
-    <section class="box__main share js-box__main js-share">
+    <section class="box__main share__section js-share-section">
         <div class="share__main">
             <button class="share__button" type="submit"><i class="far fa-address-card"></i>Crear
                 tarjeta</button>
@@ -18,9 +18,9 @@
 
         <div class="share__done">
             <p class="share__text">La tarjeta ha sido creada:</p>
-            <a href="#" class="share__link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
-            <a href="#" class="share__twitter" title="Compartir en Twitter"><i class="fab fa-twitter"></i>Compartir en
-                twitter</a>
+            <a class="share__link" href="#">random text meanwhile</a>
+            <button class="share__button share__button--twitter"><i class="fab fa-twitter"></i>Compartir en
+                twitter</button>
         </div>
     </section>
 </fieldset>

@@ -1,7 +1,8 @@
 .share {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid $color-grey-medium;
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
     &__main {
         display: flex;
         justify-content: center;
@@ -26,60 +27,46 @@
         .fa-address-card {
             margin-right: 9px;
         }
-        &:hover {
-            background-color: $color-green;
-        }
         &--disabled {
             background-color: $color-grey-medium2;
             box-shadow: none;
         }
+        &--twitter {
+            align-items: flex-start;
+            width: 180px;
+            height: 30px;
+            border-radius: 3px;
+            font-size: 14px;
+            text-transform: none;
+            background-color: $color-blue;
+            margin-bottom: 20px;
+            padding-top: 5px;
+        }
+        .fa-twitter {
+            font-size: 18px;
+            margin-right: 9px;
+        }
     }
-    /*boton en gris de cuando está preparado el boton
-    &--button {
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $color-light;
-      background-color: #d5d5d5;
-      width: 200px;
-      height: 50px;
-      border-radius: 12px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      border: none;
-    margin-top: 35px;
-      margin-bottom: 35px;
-      text-decoration: none;}*/
     &__done {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin-top: 35px;
+        margin-top: 20px;
     }
     &__text {
         color: $color-grey-dark;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: bold;
+        margin-bottom: 5px;
     }
     &__link {
+        text-align: center;
         text-decoration: none;
         color: $color-orange;
-        font-size: 16px;
-    }
-    &__twitter {
-        font-size: 14px;
-        line-height: 20px;
-        color: $color-light;
-        background-color: #00a0f5;
-        width: 180px;
-        height: 30px;
-        border-radius: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 50px;
-        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
