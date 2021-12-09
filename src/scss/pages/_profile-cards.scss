@@ -56,6 +56,9 @@
     &__arrow {
         color: $color-grey-dark;
         cursor: pointer;
+        &:hover {
+            color: $color-orange;
+        }
     }
     &__main {
         display: flex;
