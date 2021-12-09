@@ -22,7 +22,7 @@
     </header>
     <section class="profile-cards">
         <form class="form" action="">
-            <!-- cards html structure -->
+            <!-- card form html structure -->
             <section class="cards">
                 <div class="cards__container">
                     <button class="cards__button--reset" type="reset"><i class="far fa-trash-alt"></i>Reset</button>
@@ -32,129 +32,138 @@
                         <div class="cards__image"></div>
                         <ul class="cards__contact">
                             <li class="cards__item">
-                                <a class="cards__link cards__link--mobile" href="#" title="Teléfono móvil"><i class="fas fa-mobile-alt"></i></a>
+                                <a class="cards__link cards__link--phone" href="#" title="Teléfono"><i
+                                        class="fas fa-mobile-alt"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--mail" href="#" title="Correo electrónico"><i class="far fa-envelope"></i></a>
+                                <a class="cards__link cards__link--email" href="#" title="Email"><i class="far fa-envelope"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--linkedin" href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="cards__link cards__link--linkedin" href="#" title="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--github" href="#" title="GitHub"><i class="fab fa-github-alt"></i></a>
+                                <a class="cards__link cards__link--github" href="#" title="GitHub"><i
+                                        class="fab fa-github-alt"></i></a>
                             </li>
                         </ul>
                     </article>
                 </div>
             </section>
             <div class="form__fieldsets">
-                <fieldset class="box1">
+                <!-- design form html structure -->
+                <fieldset class="box">
                     <legend class="box__header">
                         <div class="box__wrapper">
                             <i class="far fa-object-ungroup box__icon"></i>
                             <h2 class="box__title">Diseña</h2>
                         </div>
-
                         <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
                     </legend>
 
-                    <section class="box__main palettes hidden js-box__main">
-                        <p class="palettes__title">Colores</p>
+                    <section class="box__main design js-box__main js-design hidden">
+                        <p class="design__text">Colores</p>
 
-                        <div class="palettes__wrapper">
-                            <div class="palettes__option palette">
-                                <input type="radio" id="palette1" name="palette" class="palette__input" />
+                        <div class="design__wrapper">
+                            <div class="design__option">
+                                <input type="radio" id="palette1" name="palette" class="design__input" />
 
-                                <label for="palette1" class="palette__label">
-                                    <ul class="palette__list">
-                                        <li class="palette__color palette1--color1"></li>
-                                        <li class="palette__color palette1--color2"></li>
-                                        <li class="palette__color palette1--color3"></li>
+                                <label for="palette1" class="design__label">
+                                    <ul class="design__list">
+                                        <li class="design__color palette1--color1"></li>
+                                        <li class="design__color palette1--color2"></li>
+                                        <li class="design__color palette1--color3"></li>
                                     </ul>
                                 </label>
                             </div>
 
-                            <div class="palettes__option palette">
-                                <input type="radio" id="palette2" name="palette" class="palette__input" />
+                            <div class="design__option">
+                                <input type="radio" id="palette2" name="palette" class="design__input" />
 
-                                <label for="palette2" class="palette__label">
-                                    <ul class="palette__list">
-                                        <li class="palette__color palette2--color1"></li>
-                                        <li class="palette__color palette2--color2"></li>
-                                        <li class="palette__color palette2--color3"></li>
+                                <label for="palette2" class="design__label">
+                                    <ul class="design__list">
+                                        <li class="design__color palette2--color1"></li>
+                                        <li class="design__color palette2--color2"></li>
+                                        <li class="design__color palette2--color3"></li>
                                     </ul>
                                 </label>
                             </div>
 
-                            <div class="palettes__option palette">
-                                <input type="radio" id="palette3" name="palette" class="palette__input" />
+                            <div class="design__option">
+                                <input type="radio" id="palette3" name="palette" class="design__input" />
 
-                                <label for="palette3" class="palette__label">
-                                    <ul class="palette__list">
-                                        <li class="palette__color palette3--color1"></li>
-                                        <li class="palette__color palette3--color2"></li>
-                                        <li class="palette__color palette3--color3"></li>
+                                <label for="palette3" class="design__label">
+                                    <ul class="design__list">
+                                        <li class="design__color palette3--color1"></li>
+                                        <li class="design__color palette3--color2"></li>
+                                        <li class="design__color palette3--color3"></li>
                                     </ul>
                                 </label>
                             </div>
                         </div>
                     </section>
                 </fieldset>
-                <fielset>
-                    <legend class="box2">
-                            <i class="far fa-keyboard"></i>
-                            <h2 class="box2__fill">Rellena</h2>
-                        <span class="box2__boxarrow"><i class="fas fa-chevron-up box2__header--arrowUp"></i></span>
-                    </legend>
-                    
-                    <fielset class="form-fill">
-                        <label for="name">Nombre completo</label>
-                        <input type="text" name="name" id="name" placeholder="Ej: Sally Jill" />
-                    
-                        <label for="job">Puesto</label>
-                        <input type="text" name="job" id="job" placeholder="Ej: Front-end unicorn"/>
-                    
-                        <label for="profileImg"> Imagen de perfil </label>
-                        <div class="containerImg">
-                            <label class="insertImg" for="insertImg">Añadir imagen </label>
-                             <div class="whitecheck"></div>
+                <!-- fill form html structure -->
+                <fieldset class="box">
+                    <legend class="box__header">
+                        <div class="box__wrapper">
+                            <i class="far fa-keyboard box__icon"></i>
+                            <h2 class="box__title">Rellena</h2>
                         </div>
-                    
-                         <label for="email">Email</label>
-                         <input type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
-                    
-                         <label for="phone">Teléfono</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
-                    
-                        <label for="linkedin">Linkedin</label>
-                        <input type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
-                    
-                        <label for="github">Github</label>
-                        <input type="text" name="github" id="github" placeholder="Ej: @sally-hill" />
-                    </fielset>
-                </fielset>
-                <fieldset class="box3">
-                    <legend class="box3__header">
-                        <span class="box3__header--box1">
-                            <i class="fas fa-share-alt box3__header--shareIcon"></i>
-                            <h2 class="box3__header--share">Comparte</h2>
-                        </span>
-                        <span class="box3__header--box2"><i class="fas fa-chevron-up box3__header--arrowUp"></i></span>
+                        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
                     </legend>
 
-                    <div class="box3__body">
-                        <button href="" class="box3__body--button" title="Click aquí para comenzar">Crear tarjeta</button>
-                    </div>
-                    <!--   boton en gris de que está preparada la tarjeta
-                         <div class="box3__body">
-                        <button href="" class="box3__body--button" title="Click aquí para comenzar"><i class="far fa-id-card">Crear tarjeta</i></button>
-                </div> -->
-                    <div class="box3__body--done">
-                        <p class="box3__body--done--par">La tarjeta ha sido creada:</p>
-                        <a href="" class="box3__body--done--link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
-                        <a href="" class="box3__body--done--twitter" title="Compartir en Twitter"><i
-                                class="fab fa-twitter"></i>Compartir en twitter</a>
-                    </div>
+                    <section class="box__main fill js-box__main js-fill">
+                        <label class="fill__label" for="name">Nombre completo</label>
+                        <input class="fill__input" type="text" name="name" id="name" placeholder="Ej: Sally Jill" />
+
+                        <label class="fill__label" for="job">Puesto</label>
+                        <input class="fill__input" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" />
+
+                        <label class="fill__label">Imagen de perfil</label>
+                        <div class="fill__container">
+                            <button class="fill__button" type="button">Añadir imagen</button>
+                            <div class="fill__image"></div>
+                        </div>
+
+                        <label class="fill__label" for="phone">Teléfono</label>
+                        <input class="fill__input" type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
+
+                        <label class="fill__label" for="email">Email</label>
+                        <input class="fill__input" type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
+
+                        <label class="fill__label" for="linkedin">LinkedIn</label>
+                        <input class="fill__input" type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+
+                        <label class="fill__label" for="github">GitHub</label>
+                        <input class="fill__input" type="text" name="github" id="github" placeholder="Ej: @sally-hill" />
+                    </section>
+                </fieldset>
+                <!-- share form html structure -->
+                <fieldset class="box">
+                    <legend class="box__header">
+                        <div class="box__wrapper">
+                            <i class="fas fa-share-alt box__icon"></i>
+                            <h2 class="box__title">Comparte</h2>
+                        </div>
+                        <i class="fas fa-chevron-down box__arrow js-box__arrow"></i>
+                    </legend>
+
+                    <section class="box__main share js-box__main js-share">
+                        <div class="share__main">
+                            <button class="share__button" type="submit"><i class="far fa-address-card"></i>Crear
+                                tarjeta</button>
+                            <button class="share__button share__button--disabled hidden" type="submit"><i
+                                    class="far fa-address-card"></i>Crear tarjeta</button>
+                        </div>
+
+                        <div class="share__done">
+                            <p class="share__text">La tarjeta ha sido creada:</p>
+                            <a href="#" class="share__link" title="Link hacia tu nueva tarjeta">random text meanwhile</a>
+                            <a href="#" class="share__twitter" title="Compartir en Twitter"><i class="fab fa-twitter"></i>Compartir en
+                                twitter</a>
+                        </div>
+                    </section>
                 </fieldset>
             </div>
         </form>
