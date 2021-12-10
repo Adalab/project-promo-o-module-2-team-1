@@ -1,20 +1,19 @@
 .mainIndex {
     background-color: $color-grey-light;
-    height: calc(100vh - 111px);
+    min-height: calc(100vh - 111px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: $font-primary;
-    position: relative;
     @include tablet {
-        height: calc(100vh - 61px);
+        min-height: calc(100vh - 61px);
     }
     &__img {
         width: 250px;
         height: 63px;
         margin-bottom: 35.4px;
+        margin-top: 95px;
         @include tablet {
             width: 419px;
             height: 105px;
@@ -55,6 +54,7 @@
             border-radius: 5px;
         }
         &--article {
+            font-size: 16px;
             width: 60px;
             @include tablet {
                 width: 75px;
@@ -83,19 +83,15 @@
         text-transform: uppercase;
         padding: 10px 20px;
         background-color: $color-green;
-        border: 1px solid $color-green;
         border-radius: 21px;
+        margin-top: 40px;
         margin-bottom: 30px;
         text-decoration: none;
-        position: absolute;
-        bottom: 0;
         @include tablet {
-            margin-bottom: 0px;
             bottom: 60px;
         }
         &:hover {
             background-color: $color-orange;
-            border: 1px solid $color-orange;
         }
     }
 }

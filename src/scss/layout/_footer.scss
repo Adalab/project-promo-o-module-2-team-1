@@ -1,5 +1,6 @@
 .footer {
     border-top: solid 1px $color-grey-medium;
+    background-color: $color-light;
     &__wrapper {
         height: 110px;
         display: flex;
@@ -22,7 +23,6 @@
     &__text {
         font-size: 14px;
         color: $color-grey;
-        font-family: $font-primary;
         opacity: 0.5;
     }
     &__link {

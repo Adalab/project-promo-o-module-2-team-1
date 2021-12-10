@@ -1,6 +1,4 @@
-// cards styles
 .cards {
-    // linear gradient style
     background: linear-gradient(#bfcdd0, #dde9ed);
     padding: 40px 0;
     display: flex;
@@ -10,6 +8,7 @@
         width: 50%;
         border-radius: 6px;
         margin-left: 30px;
+        min-height: calc(100vh - 212px);
     }
     @include desktop {
         width: 585px;

@@ -1,10 +1,8 @@
-* {
-    font-family: $font-primary;
-}
-
 .profile-cards {
+    min-height: calc(100vh - 222px);
     background: linear-gradient($color-grey-light, $color-light);
     @include tablet {
+        min-height: calc(100vh - 172px);
         padding: 20px 40px;
     }
 }
@@ -32,7 +30,6 @@
 
 .box {
     border-bottom: solid 1px $color-grey-medium;
-    margin-bottom: 10px;
     &__header {
         width: 100%;
         display: flex;
@@ -41,6 +38,10 @@
         padding: 10px 0;
         font-size: 18px;
         cursor: pointer;
+        &:hover .box__title,
+        &:hover .box__arrow {
+            color: $color-orange;
+        }
     }
     &__wrapper {
         display: flex;
@@ -57,9 +58,6 @@
     }
     &__arrow {
         color: $color-grey-dark;
-        &:hover {
-            color: $color-orange;
-        }
     }
     &__main {
         display: flex;
