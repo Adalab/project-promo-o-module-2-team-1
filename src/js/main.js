@@ -63,16 +63,17 @@ elementLegend3.addEventListener('click', handlerClickLegend3);
 // ocultar todas las section
 // mostrar la sección diseña
 
-// RELLENA
-// obtener elemento html legend de rellena
-// escuchar y manejar el elemento obtenido
-// cambiar icono flecha de rellena
-// ocultar todas las section
-// mostrar la sección rellena
 
-// COMPARTE
-// obtener elemento html legend de comparte
-// escuchar y manejar el elemento obtenido
-// cambiar icono flecha de comparte
-// ocultar todas las section
-// mostrar la sección comparte
+//RELLENA 
+
+const inputName = document.querySelector('.js-name');
+
+
+function handlerInputName(){
+    const cardName = document.querySelector('.js-cardName');
+    if ( inputName.value === '' ) {
+        cardName.innerHTML = 'Nombre Apellido';
+    } else {cardName.innerHTML = inputName.value;}
+}
+
+inputName.addEventListener('keyup', handlerInputName);
