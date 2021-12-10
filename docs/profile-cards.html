@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="header__wrapper">
             <a class="header__link" href="./" title="Awesome profile-cards"><img class="header__img" src="./assets/images/logo-awesome-profile-cards.svg" alt="Logo Awesome profile-cards"></a>
@@ -27,7 +26,7 @@
                 <div class="cards__container">
                     <button class="cards__button--reset" type="reset"><i class="far fa-trash-alt"></i>Reset</button>
                     <article class="cards__article">
-                        <h1 class="cards__title">Nombre Apellido</h1>
+                        <h1 class="cards__title js-cardName">Nombre Apellido</h1>
                         <h2 class="cards__subtitle">Front-end developer</h2>
                         <div class="cards__image"></div>
                         <ul class="cards__contact">
@@ -53,15 +52,15 @@
             <div class="form__fieldsets">
                 <!-- design form html structure -->
                 <fieldset class="box design">
-                    <legend class="box__header">
+                    <legend class="js-legendDesign box__header">
                         <div class="box__wrapper">
                             <i class="far fa-object-ungroup box__icon"></i>
                             <h2 class="box__title">Diseña</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow"></i>
+                        <i class="js-iconDesign fas fa-chevron-up box__arrow"></i>
                     </legend>
 
-                    <section class="box__main design__section hidden">
+                    <section class="js-sectionDesign box__main design__section">
                         <p class="design__text">Colores</p>
 
                         <div class="design__wrapper">
@@ -105,17 +104,17 @@
                 </fieldset>
                 <!-- fill form html structure -->
                 <fieldset class="box fill">
-                    <legend class="box__header">
+                    <legend class="box__header js-legendFill">
                         <div class="box__wrapper">
                             <i class="far fa-keyboard box__icon"></i>
                             <h2 class="box__title">Rellena</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow"></i>
+                        <i class="fas fa-chevron-down box__arrow js-iconFill"></i>
                     </legend>
 
-                    <section class="box__main fill__section">
+                    <section class="box__main fill__section js-sectionFill hidden">
                         <label class="fill__label" for="name">Nombre completo</label>
-                        <input class="fill__input" type="text" name="name" id="name" placeholder="Ej: Sally Jill" />
+                        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill" />
 
                         <label class="fill__label" for="job">Puesto</label>
                         <input class="fill__input" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" />
@@ -133,7 +132,8 @@
                         <input class="fill__input" type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
 
                         <label class="fill__label" for="linkedin">LinkedIn</label>
-                        <input class="fill__input" type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+                        <input class="fill__input" type="text" name="linkedin" id="linkedin"
+                            placeholder="Ej: linkedin.com/in/sally.hill" />
 
                         <label class="fill__label" for="github">GitHub</label>
                         <input class="fill__input" type="text" name="github" id="github" placeholder="Ej: @sally-hill" />
@@ -141,15 +141,15 @@
                 </fieldset>
                 <!-- share form html structure -->
                 <fieldset class="box share">
-                    <legend class="box__header">
+                    <legend class="box__header js-legendShare">
                         <div class="box__wrapper">
                             <i class="fas fa-share-alt box__icon"></i>
                             <h2 class="box__title">Comparte</h2>
                         </div>
-                        <i class="fas fa-chevron-down box__arrow"></i>
+                        <i class="fas fa-chevron-down box__arrow js-iconShare"></i>
                     </legend>
 
-                    <section class="box__main share__section">
+                    <section class="box__main share__section js-sectionShare hidden">
                         <div class="share__main">
                             <button class="share__button" type="submit"><i class="far fa-address-card"></i>Crear
                                 tarjeta</button>
