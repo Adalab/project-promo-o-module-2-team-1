@@ -6,6 +6,12 @@
 const elementLegend1 = document.querySelector('.js-legendDesign');
 const elementSection1 = document.querySelector('.js-sectionDesign');
 const elementIcon1 = document.querySelector('.js-iconDesign');
+const elementLegend2 = document.querySelector('.js-legendFill');
+const elementSection2 = document.querySelector('.js-sectionFill');
+const elementIcon2 = document.querySelector('.js-iconFill');
+
+
+
 
 
 // Funciones
@@ -21,9 +27,21 @@ function handlerClickLegend(){
     }
 }
 
+function handlerClickLegend2(){
+    elementSection2.classList.toggle('hidden');
+    if ( elementSection2.classList.contains('hidden') ){
+        elementIcon2.classList.remove('fa-chevron-up');
+        elementIcon2.classList.add('fa-chevron-down');
+    } else{
+        elementIcon2.classList.remove('fa-chevron-down');
+        elementIcon2.classList.add('fa-chevron-up');
+    }
+}
+
 // escuchar y manejar el elemento obtenido
 
 elementLegend1.addEventListener('click', handlerClickLegend);
+elementLegend2.addEventListener('click', handlerClickLegend2);
 
 
 
