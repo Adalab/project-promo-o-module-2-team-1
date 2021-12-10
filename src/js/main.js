@@ -9,6 +9,9 @@ const elementIcon1 = document.querySelector('.js-iconDesign');
 const elementLegend2 = document.querySelector('.js-legendFill');
 const elementSection2 = document.querySelector('.js-sectionFill');
 const elementIcon2 = document.querySelector('.js-iconFill');
+const elementLegend3 = document.querySelector('.js-legendShare');
+const elementSection3 = document.querySelector('.js-sectionShare');
+const elementIcon3 = document.querySelector('.js-iconShare');
 
 
 
@@ -16,25 +19,36 @@ const elementIcon2 = document.querySelector('.js-iconFill');
 
 // Funciones
 
-function handlerClickLegend(){
+function handlerClickLegend() {
     elementSection1.classList.toggle('hidden');
-    if ( elementSection1.classList.contains('hidden') ){
+    if (elementSection1.classList.contains('hidden')) {
         elementIcon1.classList.remove('fa-chevron-up');
         elementIcon1.classList.add('fa-chevron-down');
-    } else{
+    } else {
         elementIcon1.classList.remove('fa-chevron-down');
         elementIcon1.classList.add('fa-chevron-up');
     }
 }
 
-function handlerClickLegend2(){
+function handlerClickLegend2() {
     elementSection2.classList.toggle('hidden');
-    if ( elementSection2.classList.contains('hidden') ){
+    if (elementSection2.classList.contains('hidden')) {
         elementIcon2.classList.remove('fa-chevron-up');
         elementIcon2.classList.add('fa-chevron-down');
-    } else{
+    } else {
         elementIcon2.classList.remove('fa-chevron-down');
         elementIcon2.classList.add('fa-chevron-up');
+    }
+}
+
+function handlerClickLegend3() {
+    elementSection3.classList.toggle('hidden');
+    if (elementSection3.classList.contains('hidden')) {
+        elementIcon3.classList.remove('fa-chevron-up');
+        elementIcon3.classList.add('fa-chevron-down');
+    } else {
+        elementIcon3.classList.remove('fa-chevron-down');
+        elementIcon3.classList.add('fa-chevron-up');
     }
 }
 
@@ -42,7 +56,7 @@ function handlerClickLegend2(){
 
 elementLegend1.addEventListener('click', handlerClickLegend);
 elementLegend2.addEventListener('click', handlerClickLegend2);
-
+elementLegend3.addEventListener('click', handlerClickLegend3);
 
 
 // cambiar icono flecha de diseña
