@@ -14,9 +14,6 @@ const elementSection3 = document.querySelector('.js-sectionShare');
 const elementIcon3 = document.querySelector('.js-iconShare');
 
 
-
-
-
 // Funciones
 
 function handlerClickLegend() {
@@ -77,3 +74,16 @@ function handlerInputName() {
 }
 
 inputName.addEventListener('keyup', handlerInputName);
+
+// Email
+
+const inputEmail = document.querySelector('.js-inputEmail');
+const previewEmail = document.querySelector('.js-previewEmail');
+
+function handleKeyEmail () {
+  const valueInputEmail = inputEmail.value;
+  previewEmail.href = `mailto:${valueInputEmail}`;
+}
+
+inputEmail.addEventListener('keyup', handleKeyEmail);
+
