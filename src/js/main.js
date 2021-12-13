@@ -14,9 +14,6 @@ const elementSection3 = document.querySelector('.js-sectionShare');
 const elementIcon3 = document.querySelector('.js-iconShare');
 
 
-
-
-
 // Funciones
 
 function handlerClickLegend() {
@@ -90,16 +87,16 @@ function handlerInputOccupation() {
 inputOccupation.addEventListener('keyup', handlerInputOccupation);
 
 //TEL
-const phoneInput = document.querySelector(".js-fill_phone")
-const phonePreview = document.querySelector(".js-phonePreview");
+const phoneInput = document.querySelector('.js-fill_phone');
+const phonePreview = document.querySelector('.js-phonePreview');
 
 
 function handlerPreviewPhone() {
-  console.log(phoneInput.value);
-  phonePreview.href = "tel:${phoneInput.value}";
+  phoneInput.value;
+  phonePreview.href = 'tel:${phoneInput.value}';
 }
 
-phoneInput.addEventListener("keyup", handlerPhonePreview);
+phoneInput.addEventListener('keyup', handlerPreviewPhone);
 
 // Email
 
@@ -112,3 +109,4 @@ function handleKeyEmail () {
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
+
