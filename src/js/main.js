@@ -93,7 +93,7 @@ const phonePreview = document.querySelector('.js-phonePreview');
 
 function handlerPreviewPhone() {
   phoneInput.value;
-  phonePreview.href = 'tel:${phoneInput.value}';
+  phonePreview.href = `tel:${phoneInput.value}`;
 }
 
 phoneInput.addEventListener('keyup', handlerPreviewPhone);
@@ -110,3 +110,19 @@ function handleKeyEmail () {
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
 
+//Linkedin y GitHub
+const inputLinkedin = document.querySelector('.js-inputLinkedin');
+const inputGitHub = document.querySelector('.js-inputGitHub');
+const cardLinkedin = document.querySelector('.js-cardLinkedin');
+const cardGitHub = document.querySelector('.js-cardGitHub');
+
+function handlerInputLinkedin(){
+  cardLinkedin.href = inputLinkedin.value;
+}
+
+function handlerInputGitHub(){
+  cardGitHub.href = inputGitHub.value;
+}
+
+inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
+inputGitHub.addEventListener('keyup', handlerInputGitHub);
