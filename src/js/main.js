@@ -1,7 +1,7 @@
 'use strict';
 
-// DISEÑA
-// obtener elemento html legend de diseña
+
+// obtener elementos html
 
 const elementLegend1 = document.querySelector('.js-legendDesign');
 const elementSection1 = document.querySelector('.js-sectionDesign');
@@ -14,7 +14,7 @@ const elementSection3 = document.querySelector('.js-sectionShare');
 const elementIcon3 = document.querySelector('.js-iconShare');
 
 
-// Funciones
+// funciones manejadoras
 
 function handlerClickLegend() {
   elementSection1.classList.toggle('hidden');
@@ -49,31 +49,31 @@ function handlerClickLegend3() {
   }
 }
 
-// escuchar y manejar el elemento obtenido
+
+// escuchar y manejar evento
 
 elementLegend1.addEventListener('click', handlerClickLegend);
 elementLegend2.addEventListener('click', handlerClickLegend2);
 elementLegend3.addEventListener('click', handlerClickLegend3);
 
 
-// cambiar icono flecha de diseña
-// ocultar todas las section
-// mostrar la sección diseña
-
-
-//RELLENA
+// formulario: nombre completo
 
 const inputName = document.querySelector('.js-name');
-
 
 function handlerInputName() {
   const cardName = document.querySelector('.js-cardName');
   if (inputName.value === '') {
     cardName.innerHTML = 'Nombre Apellido';
-  } else { cardName.innerHTML = inputName.value; }
+  } else {
+    cardName.innerHTML = inputName.value.toLowerCase();
+  }
 }
 
 inputName.addEventListener('keyup', handlerInputName);
+
+
+// formulario: puesto
 
 const inputOccupation = document.querySelector('.js-occupation');
 
@@ -81,46 +81,53 @@ function handlerInputOccupation() {
   const cardOccupation = document.querySelector('.js-cardOccupation');
   if (inputOccupation.value === '') {
     cardOccupation.innerHTML = 'Front-end developer';
-  } else { cardOccupation.innerHTML = inputOccupation.value; }
+  } else {
+    cardOccupation.innerHTML = inputOccupation.value.toLowerCase();
+  }
 }
 
 inputOccupation.addEventListener('keyup', handlerInputOccupation);
 
-//TEL
+
+// formulario: teléfono
+
 const phoneInput = document.querySelector('.js-fill_phone');
 const phonePreview = document.querySelector('.js-phonePreview');
-
 
 function handlerPreviewPhone() {
   phoneInput.value;
   phonePreview.href = `tel:${phoneInput.value}`;
+  phonePreview.title = `Teléfono: ${phoneInput.value}`;
 }
 
 phoneInput.addEventListener('keyup', handlerPreviewPhone);
 
-// Email
+
+// formulario: email
 
 const inputEmail = document.querySelector('.js-inputEmail');
 const previewEmail = document.querySelector('.js-previewEmail');
 
-function handleKeyEmail () {
+function handleKeyEmail() {
   const valueInputEmail = inputEmail.value;
   previewEmail.href = `mailto:${valueInputEmail}`;
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
 
-//Linkedin y GitHub
+
+// formulario: enlaces
+
 const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGitHub = document.querySelector('.js-inputGitHub');
 const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 
-function handlerInputLinkedin(){
+function handlerInputLinkedin() {
   cardLinkedin.href = inputLinkedin.value;
 }
 
-function handlerInputGitHub(){
+function handlerInputGitHub() {
   cardGitHub.href = inputGitHub.value;
 }
 

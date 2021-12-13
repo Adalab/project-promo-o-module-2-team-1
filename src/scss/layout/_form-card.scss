@@ -44,30 +44,42 @@
     }
     &__article {
         width: 240px;
+        height: 326px;
         background-color: $color-light;
         margin-top: 20px;
         border-radius: 2px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
-    &__title {
+    &__wrapper {
         border-left: 5px solid $color-green;
+    }
+    &__title {
         color: $color-green-dark;
         font-family: $font-tertiary;
         font-weight: bold;
         font-size: 18px;
         line-height: 20px;
         padding-left: 15px;
-        padding-bottom: 4px;
+        margin-bottom: 4px;
         margin-top: 20px;
+        margin-right: 20px;
+        overflow: hidden;
+        height: 20px;
+        text-transform: capitalize;
+        white-space: nowrap;
     }
     &__subtitle {
-        border-left: 5px solid $color-green;
         color: $color-grey-dark;
         font-family: $font-tertiary;
         font-size: 16px;
         line-height: 20px;
         padding-left: 15px;
         margin-bottom: 10px;
+        margin-right: 20px;
+        overflow: hidden;
+        height: 20px;
+        text-transform: capitalize;
+        white-space: nowrap;
     }
     &__image {
         width: 240px;
