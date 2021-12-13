@@ -100,3 +100,15 @@ function handlerPreviewPhone() {
 }
 
 phoneInput.addEventListener("keyup", handlerPhonePreview);
+
+// Email
+
+const inputEmail = document.querySelector('.js-inputEmail');
+const previewEmail = document.querySelector('.js-previewEmail');
+
+function handleKeyEmail () {
+  const valueInputEmail = inputEmail.value;
+  previewEmail.href = `mailto:${valueInputEmail}`;
+}
+
+inputEmail.addEventListener('keyup', handleKeyEmail);
