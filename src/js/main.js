@@ -77,3 +77,14 @@ function handlerInputName() {
 }
 
 inputName.addEventListener('keyup', handlerInputName);
+
+const inputOccupation = document.querySelector('.js-occupation');
+
+function handlerInputOccupation() {
+    const cardOccupation = document.querySelector('.js-cardOccupation');
+    if (inputOccupation.value === '') {
+      cardOccupation.innerHTML = 'Front-end developer';
+    } else { cardOccupation.innerHTML = inputOccupation.value; }
+  }
+  
+  inputOccupation.addEventListener('keyup', handlerInputOccupation);
