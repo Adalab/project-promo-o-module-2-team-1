@@ -105,6 +105,7 @@
         height: 32px;
         border-radius: 50%;
         border: 2px solid $color-green-light;
+        cursor: pointer;
         &:hover {
             background-color: $color-green-light;
             color: $color-green-dark;

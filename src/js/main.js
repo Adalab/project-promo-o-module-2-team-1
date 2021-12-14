@@ -111,6 +111,7 @@ const previewEmail = document.querySelector('.js-previewEmail');
 function handleKeyEmail() {
   const valueInputEmail = inputEmail.value;
   previewEmail.href = `mailto:${valueInputEmail}`;
+  previewEmail.title = `Email: ${valueInputEmail}`;
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
@@ -125,10 +126,12 @@ const cardGitHub = document.querySelector('.js-cardGitHub');
 
 function handlerInputLinkedin() {
   cardLinkedin.href = inputLinkedin.value;
+  cardLinkedin.title = `LinkedIn: ${inputLinkedin.value}`;
 }
 
 function handlerInputGitHub() {
   cardGitHub.href = inputGitHub.value;
+  cardGitHub.title = `GitHub: ${inputGitHub.value}`;
 }
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
