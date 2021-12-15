@@ -1,10 +1,10 @@
 ![image](src/images/logo-team-undefined.svg)
 
-[Sara Sánchez](https://github.com/SaraSanchezL)
-[Sandra Gutiérrez](https://github.com/Sandra-Gutierrez)
-[María Ramírez](https://github.com/Mariamafalda2021)
-[Mara Rocha](https://github.com/mararochafernandez)
-[Barbara Ruiz](https://github.com/Babsrm)
+- [Sara Sánchez](https://github.com/SaraSanchezL)
+- [Sandra Gutiérrez](https://github.com/Sandra-Gutierrez)
+- [María Ramírez](https://github.com/Mariamafalda2021)
+- [Mara Rocha](https://github.com/mararochafernandez)
+- [Barbara Ruiz](https://github.com/Babsrm)
 
 ---
 
