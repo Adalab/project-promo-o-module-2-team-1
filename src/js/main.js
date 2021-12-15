@@ -18,12 +18,20 @@ const elementIcon3 = document.querySelector('.js-iconShare');
 
 function handlerClickLegend() {
   elementSection1.classList.toggle('hidden');
+  // console.log(elementSection1.classList.contains('hidden'));
+
   if (elementSection1.classList.contains('hidden')) {
     elementIcon1.classList.remove('fa-chevron-up');
     elementIcon1.classList.add('fa-chevron-down');
   } else {
     elementIcon1.classList.remove('fa-chevron-down');
     elementIcon1.classList.add('fa-chevron-up');
+    elementSection2.classList.add('hidden');
+    elementIcon2.classList.remove('fa-chevron-up');
+    elementIcon2.classList.add('fa-chevron-down');
+    elementSection3.classList.add('hidden');
+    elementIcon3.classList.remove('fa-chevron-up');
+    elementIcon3.classList.add('fa-chevron-down');
   }
 }
 
@@ -35,6 +43,12 @@ function handlerClickLegend2() {
   } else {
     elementIcon2.classList.remove('fa-chevron-down');
     elementIcon2.classList.add('fa-chevron-up');
+    elementSection1.classList.add('hidden');
+    elementIcon1.classList.remove('fa-chevron-up');
+    elementIcon1.classList.add('fa-chevron-down');
+    elementSection3.classList.add('hidden');
+    elementIcon3.classList.remove('fa-chevron-up');
+    elementIcon3.classList.add('fa-chevron-down');
   }
 }
 
@@ -46,6 +60,12 @@ function handlerClickLegend3() {
   } else {
     elementIcon3.classList.remove('fa-chevron-down');
     elementIcon3.classList.add('fa-chevron-up');
+    elementSection1.classList.add('hidden');
+    elementIcon1.classList.remove('fa-chevron-up');
+    elementIcon1.classList.add('fa-chevron-down');
+    elementSection2.classList.add('hidden');
+    elementIcon2.classList.remove('fa-chevron-up');
+    elementIcon2.classList.add('fa-chevron-down');
   }
 }
 
