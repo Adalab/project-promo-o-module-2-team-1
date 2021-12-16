@@ -125,16 +125,34 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        text-decoration: none;
-        color: $color-green-dark;
+        text-decoration: none;       
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        border: 2px solid $color-green-light;
         cursor: pointer;
-        &:hover {
-            background-color: $color-green-light;
+        &--palette1{
+            border: 2px solid $color-green-light;
             color: $color-green-dark;
+            &:hover {
+                background-color: $color-green-light;
+                color: $color-green-dark;}
         }
+        &--palette2{
+            border: 2px solid $color-tomato;
+            color: $color-rusty-red;
+            &:hover {
+                background-color: $color-tomato;
+                color: $color-rusty-red;}
+        }
+        &--palette3{
+            border: 2px solid $color-grey-blue-light;
+            color: $color-grey-dark;
+            &:hover {
+                background-color: $color-grey-blue-light;
+                color: $color-grey-dark;}
+        }
+        
+
+        }
+
     }
-}

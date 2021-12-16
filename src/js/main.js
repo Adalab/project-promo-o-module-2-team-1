@@ -13,8 +13,8 @@ const elementLegend3 = document.querySelector('.js-legendShare');
 const elementSection3 = document.querySelector('.js-sectionShare');
 const elementIcon3 = document.querySelector('.js-iconShare');
 const labelPalettes = document.querySelectorAll('.js-labelPalette');
-const borderPalette = document.querySelectorAll('.js-bordePalette');
-
+const borderPalette = document.querySelector('.js-borderPalette');
+const linksIcons = document.querySelectorAll('.js-linksIcons');
 
 // funciones manejadoras
 
@@ -161,9 +161,9 @@ inputGitHub.addEventListener('keyup', handlerInputGitHub);
 
 //Palettes
 
-function handlerClickPalette(event){
+function handlerClickPalette(event) {
   console.log(event.currentTarget);
-  if(event.currentTarget.id === 'palette1'){
+  if (event.currentTarget.id === 'palette1') {
     cardName.classList.remove('cards__title--palette2');
     cardName.classList.remove('cards__title--palette3');
     cardName.classList.add('cards__title--palette1');
@@ -173,9 +173,12 @@ function handlerClickPalette(event){
     borderPalette.classList.remove('cards__wrapper--palette2');
     borderPalette.classList.remove('cards__wrapper--palette3');
     borderPalette.classList.add('cards__wrapper--palette1');
-    
+    linksIcons.classList.remove('cards__link--palette2');
+    linksIcons.classList.remove('cards__link--palette3');
+    linksIcons.classList.add('cards__link--palette1');
 
-  }else if(event.currentTarget.id === 'palette2'){
+
+  } else if (event.currentTarget.id === 'palette2') {
     cardName.classList.remove('cards__title--palette1');
     cardName.classList.remove('cards__title--palette3');
     cardName.classList.add('cards__title--palette2');
@@ -185,7 +188,12 @@ function handlerClickPalette(event){
     borderPalette.classList.remove('cards__wrapper--palette1');
     borderPalette.classList.remove('cards__wrapper--palette3');
     borderPalette.classList.add('cards__wrapper--palette2');
-  }else if(event.currentTarget.id === 'palette3'){
+    //INCLUIR FOR PARA RECORRER ARRAY
+    linksIcons.classList.remove('cards__link--palette1');
+    linksIcons.classList.remove('cards__link--palette3');
+    linksIcons.classList.add('cards__link--palette2');
+
+  } else if (event.currentTarget.id === 'palette3') {
     cardName.classList.remove('cards__title--palette1');
     cardName.classList.remove('cards__title--palette2');
     cardName.classList.add('cards__title--palette3');
@@ -195,11 +203,14 @@ function handlerClickPalette(event){
     borderPalette.classList.remove('cards__wrapper--palette1');
     borderPalette.classList.remove('cards__wrapper--palette2');
     borderPalette.classList.add('cards__wrapper--palette3');
+    linksIcons.classList.remove('cards__link--palette1');
+    linksIcons.classList.remove('cards__link--palette2');
+    linksIcons.classList.add('cards__link--palette3');
   }
 
 }
 
-for ( const palette of labelPalettes){
+for (const palette of labelPalettes) {
   palette.addEventListener('click', handlerClickPalette);
 }
 
