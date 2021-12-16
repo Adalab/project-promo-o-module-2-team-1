@@ -12,6 +12,8 @@ const elementIcon2 = document.querySelector('.js-iconFill');
 const elementLegend3 = document.querySelector('.js-legendShare');
 const elementSection3 = document.querySelector('.js-sectionShare');
 const elementIcon3 = document.querySelector('.js-iconShare');
+const labelPalettes = document.querySelectorAll('.js-labelPalette');
+const borderPalette = document.querySelectorAll('.js-bordePalette');
 
 
 // funciones manejadoras
@@ -80,9 +82,9 @@ elementLegend3.addEventListener('click', handlerClickLegend3);
 // formulario: nombre completo
 
 const inputName = document.querySelector('.js-name');
+const cardName = document.querySelector('.js-cardName');
 
 function handlerInputName() {
-  const cardName = document.querySelector('.js-cardName');
   if (inputName.value === '') {
     cardName.innerHTML = 'Nombre Apellido';
   } else {
@@ -96,9 +98,9 @@ inputName.addEventListener('keyup', handlerInputName);
 // formulario: puesto
 
 const inputOccupation = document.querySelector('.js-occupation');
+const cardOccupation = document.querySelector('.js-cardOccupation');
 
 function handlerInputOccupation() {
-  const cardOccupation = document.querySelector('.js-cardOccupation');
   if (inputOccupation.value === '') {
     cardOccupation.innerHTML = 'Front-end developer';
   } else {
@@ -156,3 +158,48 @@ function handlerInputGitHub() {
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
 inputGitHub.addEventListener('keyup', handlerInputGitHub);
+
+//Palettes
+
+function handlerClickPalette(event){
+  console.log(event.currentTarget);
+  if(event.currentTarget.id === 'palette1'){
+    cardName.classList.remove('cards__title--palette2');
+    cardName.classList.remove('cards__title--palette3');
+    cardName.classList.add('cards__title--palette1');
+    cardOccupation.classList.remove('cards__subtitle--palette2');
+    cardOccupation.classList.remove('cards__subtitle--palette3');
+    cardOccupation.classList.add('cards__subtitle--palette1');
+    borderPalette.classList.remove('cards__wrapper--palette2');
+    borderPalette.classList.remove('cards__wrapper--palette3');
+    borderPalette.classList.add('cards__wrapper--palette1');
+    
+
+  }else if(event.currentTarget.id === 'palette2'){
+    cardName.classList.remove('cards__title--palette1');
+    cardName.classList.remove('cards__title--palette3');
+    cardName.classList.add('cards__title--palette2');
+    cardOccupation.classList.remove('cards__subtitle--palette1');
+    cardOccupation.classList.remove('cards__subtitle--palette3');
+    cardOccupation.classList.add('cards__subtitle--palette2');
+    borderPalette.classList.remove('cards__wrapper--palette1');
+    borderPalette.classList.remove('cards__wrapper--palette3');
+    borderPalette.classList.add('cards__wrapper--palette2');
+  }else if(event.currentTarget.id === 'palette3'){
+    cardName.classList.remove('cards__title--palette1');
+    cardName.classList.remove('cards__title--palette2');
+    cardName.classList.add('cards__title--palette3');
+    cardOccupation.classList.remove('cards__subtitle--palette1');
+    cardOccupation.classList.remove('cards__subtitle--palette2');
+    cardOccupation.classList.add('cards__subtitle--palette3');
+    borderPalette.classList.remove('cards__wrapper--palette1');
+    borderPalette.classList.remove('cards__wrapper--palette2');
+    borderPalette.classList.add('cards__wrapper--palette3');
+  }
+
+}
+
+for ( const palette of labelPalettes){
+  palette.addEventListener('click', handlerClickPalette);
+}
+

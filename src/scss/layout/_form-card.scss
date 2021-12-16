@@ -51,10 +51,27 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
     &__wrapper {
-        border-left: 5px solid $color-green;
+        
+        &--palette1{
+            border-left: 5px solid $color-green;
+        }
+        &--palette2{
+            border-left: 5px solid $color-rusty-red;
+        }
+        &--palette3{
+            border-left: 5px solid $color-orange-light;
+        }
     }
     &__title {
-        color: $color-green-dark;
+        &--palette1{
+            color: $color-green-dark;
+        }
+        &--palette2{
+            color: $color-passion-red;
+        }
+        &--palette3{
+            color: $color-blue-green;
+        }
         font-family: $font-tertiary;
         font-weight: bold;
         font-size: 18px;
@@ -69,6 +86,15 @@
         white-space: nowrap;
     }
     &__subtitle {
+        &--palette1{
+            color: $color-green-dark;
+        }
+        &--palette2{
+            color: $color-passion-red;
+        }
+        &--palette3{
+            color: $color-blue-green;
+        }
         color: $color-grey-dark;
         font-family: $font-tertiary;
         font-size: 16px;
