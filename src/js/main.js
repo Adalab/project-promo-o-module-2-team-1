@@ -251,7 +251,7 @@ function handleResetBtn() {
   cardGitHub.href = '';
   cardGitHub.title = 'GitHub';
   // reset image
-  profileImage.style.backgroundImage = 'url(../assets/images/profile-image.svg)';
+  profileImage.style.backgroundImage = 'url(./assets/images/profile-image.svg)';
   profilePreview.style.backgroundImage = 'none';
   // reset palettes
   setPalette1();
