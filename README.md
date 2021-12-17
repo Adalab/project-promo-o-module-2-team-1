@@ -2,7 +2,7 @@
 
 ---
 
-<h1>💻Undefined💻</h1>
+### [Team Undefined profile-cards](https://github.com/SaraSanchezL)
 
 - [Sara Sánchez](https://github.com/SaraSanchezL)
 - [Sandra Gutiérrez](https://github.com/Sandra-Gutierrez)
@@ -10,8 +10,10 @@
 - [Mara Rocha](https://github.com/mararochafernandez)
 - [Barbara Ruiz](https://github.com/Babsrm)
 
-<h2>Dev's team</h2>
+# 💻Undefined💻
 
-<h5>Quality based. Satisfied clients. Pleased customers.</h5>
+## Dev's team
+
+##### Quality based. Satisfied clients. Pleased customers.
 
 This project is licensed under the terms of the MIT license.

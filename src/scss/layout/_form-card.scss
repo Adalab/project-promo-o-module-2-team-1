@@ -1,5 +1,5 @@
 .cards {
-    background: linear-gradient(#bfcdd0, #dde9ed);
+    background: linear-gradient(#fbd5c1, #fef6f1);
     padding: 40px 0;
     display: flex;
     justify-content: center;
@@ -52,13 +52,16 @@
     }
     &__wrapper {
         &--palette1 {
-            border-left: 5px solid $color-green;
+            border-left: 5px solid $color-palette1-2;
         }
         &--palette2 {
-            border-left: 5px solid $color-rusty-red;
+            border-left: 5px solid $color-palette2-2;
         }
         &--palette3 {
-            border-left: 5px solid $color-orange-light;
+            border-left: 5px solid $color-palette3-2;
+        }
+        &--palette4 {
+            border-left: 5px solid $color-palette4-2;
         }
     }
     &__title {
@@ -75,17 +78,19 @@
         text-transform: capitalize;
         white-space: nowrap;
         &--palette1 {
-            color: $color-green-dark;
+            color: $color-palette1-1;
         }
         &--palette2 {
-            color: $color-passion-red;
+            color: $color-palette2-1;
         }
         &--palette3 {
-            color: $color-blue-green;
+            color: $color-palette3-1;
+        }
+        &--palette4 {
+            color: $color-palette4-1;
         }
     }
     &__subtitle {
-        color: $color-grey-dark;
         font-family: $font-tertiary;
         font-size: 16px;
         line-height: 20px;
@@ -97,21 +102,25 @@
         text-transform: capitalize;
         white-space: nowrap;
         &--palette1 {
-            color: $color-green-dark;
+            color: $color-palette1-1;
         }
         &--palette2 {
-            color: $color-passion-red;
+            color: $color-palette2-1;
         }
         &--palette3 {
-            color: $color-blue-green;
+            color: $color-palette3-1;
+        }
+        &--palette4 {
+            color: $color-palette4-1;
         }
     }
     &__image {
         width: 240px;
         height: 200px;
         background: url('../images/profile-image.svg');
-        background-size: cover;
-        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
     &__contact {
         display: flex;
@@ -120,7 +129,7 @@
     &__item {
         margin-right: 10px;
     }
-    &__link {
+    &__icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -130,27 +139,35 @@
         border-radius: 50%;
         cursor: pointer;
         &--palette1 {
-            border: 2px solid $color-green-light;
-            color: $color-green-dark;
+            border: 2px solid $color-palette1-3;
+            color: $color-palette1-1;
             &:hover {
-                background-color: $color-green-light;
-                color: $color-green-dark;
+                background-color: $color-palette1-3;
+                color: $color-palette1-1;
             }
         }
         &--palette2 {
-            border: 2px solid $color-tomato;
-            color: $color-rusty-red;
+            border: 2px solid $color-palette2-3;
+            color: $color-palette2-1;
             &:hover {
-                background-color: $color-tomato;
-                color: $color-rusty-red;
+                background-color: $color-palette2-3;
+                color: $color-palette2-1;
             }
         }
         &--palette3 {
-            border: 2px solid $color-grey-blue-light;
-            color: $color-grey-dark;
+            border: 2px solid $color-palette3-3;
+            color: $color-palette3-1;
             &:hover {
-                background-color: $color-grey-blue-light;
-                color: $color-grey-dark;
+                background-color: $color-palette3-3;
+                color: $color-palette3-1;
+            }
+        }
+        &--palette4 {
+            border: 2px solid $color-palette4-3;
+            color: $color-palette4-1;
+            &:hover {
+                background-color: $color-palette4-3;
+                color: $color-palette4-1;
             }
         }
     }

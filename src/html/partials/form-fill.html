@@ -1,21 +1,22 @@
 <!-- fill form html structure -->
 <fieldset class="box fill">
-    <legend class="box__header js-legendFill">
+    <legend class="box__header js-legend-fill">
         <div class="box__wrapper">
-            <i class="far fa-keyboard box__icon"></i>
-            <h2 class="box__title">Rellena</h2>
+            <div class="box__wrapper">
+                <i class="far fa-keyboard box__icon"></i>
+                <h2 class="box__title">Rellena</h2>
+            </div>
+
+            <i class="fas fa-chevron-down box__arrow js-icon-fill"></i>
         </div>
-        <i class="fas fa-chevron-down box__arrow js-iconFill"></i>
     </legend>
 
-    <section class="box__main fill__section js-sectionFill hidden">
+    <section class="box__main fill__section js-section-fill hidden">
         <label class="fill__label" for="name">Nombre completo</label>
-        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill"
-            maxlength="16" />
+        <input class="fill__input js-input-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill" maxlength="16" />
 
         <label class="fill__label" for="job">Puesto</label>
-        <input class="fill__input js-occupation" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn"
-            maxlength="24" />
+        <input class="fill__input js-input-job" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" maxlength="24" />
 
         <label class="fill__label">Imagen de perfil</label>
         <div class="fill__container">
@@ -25,18 +26,15 @@
         </div>
 
         <label class="fill__label" for="phone">Teléfono</label>
-        <input class="js-fill_phone fill__input" type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
+        <input class="fill__input js-input-phone" type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
 
         <label class="fill__label" for="email">Email</label>
-        <input class="fill__input js-inputEmail" type="email" name="email" id="email"
-            placeholder="Ej: sally-hill@gmail.com" />
+        <input class="fill__input js-input-email" type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
 
         <label class="fill__label" for="linkedin">LinkedIn</label>
-        <input class="fill__input js-inputLinkedin" type="text" name="linkedin" id="linkedin"
-            placeholder="Ej: linkedin.com/in/sally.hill" />
+        <input class="fill__input js-input-linkedin" type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
 
         <label class="fill__label" for="github">GitHub</label>
-        <input class="fill__input js-inputGitHub" type="text" name="github" id="github"
-            placeholder="Ej: github.com/sally-hill" />
+        <input class="fill__input js-input-github" type="text" name="github" id="github" placeholder="Ej: github.com/sally-hill" />
     </section>
 </fieldset>

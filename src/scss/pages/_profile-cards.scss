@@ -33,8 +33,6 @@
     &__header {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px 0;
         font-size: 18px;
         cursor: pointer;
@@ -44,6 +42,7 @@
         }
     }
     &__wrapper {
+        width: 100%;
         display: flex;
         align-items: center;
     }

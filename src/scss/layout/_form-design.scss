@@ -26,36 +26,48 @@
 
 .palette1 {
     &--color1 {
-        background-color: $color-green-dark;
+        background-color: $color-palette1-1;
     }
     &--color2 {
-        background-color: $color-green;
+        background-color: $color-palette1-2;
     }
     &--color3 {
-        background-color: $color-green-light;
+        background-color: $color-palette1-3;
     }
 }
 
 .palette2 {
     &--color1 {
-        background-color: $color-passion-red;
+        background-color: $color-palette2-1;
     }
     &--color2 {
-        background-color: $color-rusty-red;
+        background-color: $color-palette2-2;
     }
     &--color3 {
-        background-color: $color-tomato;
+        background-color: $color-palette2-3;
     }
 }
 
 .palette3 {
     &--color1 {
-        background-color: $color-blue-green;
+        background-color: $color-palette3-1;
     }
     &--color2 {
-        background-color: $color-orange-light;
+        background-color: $color-palette3-2;
     }
     &--color3 {
-        background-color: $color-grey-blue-light;
+        background-color: $color-palette3-3;
+    }
+}
+
+.palette4 {
+    &--color1 {
+        background-color: $color-palette4-1;
+    }
+    &--color2 {
+        background-color: $color-palette4-2;
+    }
+    &--color3 {
+        background-color: $color-palette4-3;
     }
 }
