@@ -173,10 +173,11 @@ function handlerClickPalette(event) {
     borderPalette.classList.remove('cards__wrapper--palette2');
     borderPalette.classList.remove('cards__wrapper--palette3');
     borderPalette.classList.add('cards__wrapper--palette1');
-    linksIcons.classList.remove('cards__link--palette2');
-    linksIcons.classList.remove('cards__link--palette3');
-    linksIcons.classList.add('cards__link--palette1');
-
+    for (const link of linksIcons) {
+      link.classList.remove('cards__link--palette2');
+      link.classList.remove('cards__link--palette3');
+      link.classList.add('cards__link--palette1');
+    }
 
   } else if (event.currentTarget.id === 'palette2') {
     cardName.classList.remove('cards__title--palette1');
@@ -189,10 +190,11 @@ function handlerClickPalette(event) {
     borderPalette.classList.remove('cards__wrapper--palette3');
     borderPalette.classList.add('cards__wrapper--palette2');
     //INCLUIR FOR PARA RECORRER ARRAY
-    linksIcons.classList.remove('cards__link--palette1');
-    linksIcons.classList.remove('cards__link--palette3');
-    linksIcons.classList.add('cards__link--palette2');
-
+    for (const link of linksIcons) {
+      link.classList.remove('cards__link--palette1');
+      link.classList.remove('cards__link--palette3');
+      link.classList.add('cards__link--palette2');
+    }
   } else if (event.currentTarget.id === 'palette3') {
     cardName.classList.remove('cards__title--palette1');
     cardName.classList.remove('cards__title--palette2');
@@ -203,9 +205,11 @@ function handlerClickPalette(event) {
     borderPalette.classList.remove('cards__wrapper--palette1');
     borderPalette.classList.remove('cards__wrapper--palette2');
     borderPalette.classList.add('cards__wrapper--palette3');
-    linksIcons.classList.remove('cards__link--palette1');
-    linksIcons.classList.remove('cards__link--palette2');
-    linksIcons.classList.add('cards__link--palette3');
+    for (const link of linksIcons) {
+      link.classList.remove('cards__link--palette1');
+      link.classList.remove('cards__link--palette2');
+      link.classList.add('cards__link--palette3');
+    }
   }
 
 }

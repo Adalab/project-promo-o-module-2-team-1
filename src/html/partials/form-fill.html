@@ -10,27 +10,33 @@
 
     <section class="box__main fill__section js-sectionFill hidden">
         <label class="fill__label" for="name">Nombre completo</label>
-        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill" maxlength="16" />
+        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill"
+            maxlength="16" />
 
         <label class="fill__label" for="job">Puesto</label>
-        <input class="fill__input js-occupation" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" maxlength="24" />
+        <input class="fill__input js-occupation" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn"
+            maxlength="24" />
 
         <label class="fill__label">Imagen de perfil</label>
         <div class="fill__container">
-            <label class="fill__button" type="button">Añadir imagen</label>
-            <div class="fill__image"></div>
+            <label class="fill__button js__profile-trigger" for="img-selector" type="button">Añadir imagen</label>
+            <input type="file" name="img-selector" id="img-selector" class="js__profile-upload-btn hidden">
+            <div class="fill__image js__profile-preview"></div>
         </div>
 
         <label class="fill__label" for="phone">Teléfono</label>
         <input class="js-fill_phone fill__input" type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
 
         <label class="fill__label" for="email">Email</label>
-        <input class="fill__input js-inputEmail" type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
+        <input class="fill__input js-inputEmail" type="email" name="email" id="email"
+            placeholder="Ej: sally-hill@gmail.com" />
 
         <label class="fill__label" for="linkedin">LinkedIn</label>
-        <input class="fill__input js-inputLinkedin" type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+        <input class="fill__input js-inputLinkedin" type="text" name="linkedin" id="linkedin"
+            placeholder="Ej: linkedin.com/in/sally.hill" />
 
         <label class="fill__label" for="github">GitHub</label>
-        <input class="fill__input js-inputGitHub" type="text" name="github" id="github" placeholder="Ej: github.com/sally-hill" />
+        <input class="fill__input js-inputGitHub" type="text" name="github" id="github"
+            placeholder="Ej: github.com/sally-hill" />
     </section>
 </fieldset>
