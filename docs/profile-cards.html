@@ -7,7 +7,8 @@
     <title>Awesome profile-cards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://kit.fontawesome.com/7879d2c79d.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./assets/images/favicon.png" />
@@ -24,29 +25,29 @@
             <!-- card form html structure -->
             <section class="cards">
                 <div class="cards__container">
-                    <button class="cards__button--reset" type="reset"><i class="far fa-trash-alt"></i>Reset</button>
+                    <button class="cards__button--reset js-resetBtn" type="reset"><i class="far fa-trash-alt"></i>Reset</button>
                     <article class="cards__article">
                         <div class="js-borderPalette cards__wrapper--palette1">
                             <h1 class="cards__title js-cardName cards__title--palette1">Nombre Apellido</h1>
                             <h2 class="cards__subtitle js-cardOccupation">Front-end developer</h2>
                         </div>
-                        <div class="cards__image"></div>
+                        <div class="cards__image js__profile-image"></div>
                         <ul class="cards__contact">
                             <li class="cards__item">
-                                <a class="cards__link cards__link--phone js-phonePreview js-linksIcons" title="Teléfono"><i
-                                        class="fas fa-mobile-alt"></i></a>
+                                <a class="cards__link cards__link--phone js-phonePreview js-linksIcons cards__link--palette1"
+                                    title="Teléfono"><i class="fas fa-mobile-alt"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--email js-previewEmail js-linksIcons" title="Email"><i
-                                        class="far fa-envelope"></i></a>
+                                <a class="cards__link cards__link--email js-previewEmail js-linksIcons cards__link--palette1"
+                                    title="Email"><i class="far fa-envelope"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--linkedin js-cardLinkedin js-linksIcons" title="LinkedIn"
-                                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="cards__link cards__link--linkedin js-cardLinkedin js-linksIcons cards__link--palette1"
+                                    title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             </li>
                             <li class="cards__item">
-                                <a class="cards__link cards__link--github js-cardGitHub js-linksIcons" title="GitHub"
-                                    target="_blank"><i class="fab fa-github-alt"></i></a>
+                                <a class="cards__link cards__link--github js-cardGitHub js-linksIcons cards__link--palette1"
+                                    title="GitHub" target="_blank"><i class="fab fa-github-alt"></i></a>
                             </li>
                         </ul>
                     </article>
@@ -68,7 +69,7 @@
 
                         <div class="design__wrapper">
                             <div class="design__option">
-                                <input type="radio" id="palette1" name="palette" class="js-labelPalette  design__input" />
+                                <input type="radio" id="palette1" name="palette" class="js-labelPalette  design__input" checked />
 
                                 <label for="palette1" class="design__label">
                                     <ul class="design__list">
@@ -117,28 +118,34 @@
 
                     <section class="box__main fill__section js-sectionFill hidden">
                         <label class="fill__label" for="name">Nombre completo</label>
-                        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill" maxlength="16" />
+                        <input class="fill__input js-name" type="text" name="name" id="name" placeholder="Ej: Sally Jill"
+                            maxlength="16" />
 
                         <label class="fill__label" for="job">Puesto</label>
-                        <input class="fill__input js-occupation" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" maxlength="24" />
+                        <input class="fill__input js-occupation" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn"
+                            maxlength="24" />
 
                         <label class="fill__label">Imagen de perfil</label>
                         <div class="fill__container">
-                            <label class="fill__button" type="button">Añadir imagen</label>
-                            <div class="fill__image"></div>
+                            <label class="fill__button js__profile-trigger" for="img-selector" type="button">Añadir imagen</label>
+                            <input type="file" name="img-selector" id="img-selector" class="js__profile-upload-btn hidden">
+                            <div class="fill__image js__profile-preview"></div>
                         </div>
 
                         <label class="fill__label" for="phone">Teléfono</label>
                         <input class="js-fill_phone fill__input" type="tel" name="phone" id="phone" placeholder="Ej: 555-55-55-55" />
 
                         <label class="fill__label" for="email">Email</label>
-                        <input class="fill__input js-inputEmail" type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" />
+                        <input class="fill__input js-inputEmail" type="email" name="email" id="email"
+                            placeholder="Ej: sally-hill@gmail.com" />
 
                         <label class="fill__label" for="linkedin">LinkedIn</label>
-                        <input class="fill__input js-inputLinkedin" type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+                        <input class="fill__input js-inputLinkedin" type="text" name="linkedin" id="linkedin"
+                            placeholder="Ej: linkedin.com/in/sally.hill" />
 
                         <label class="fill__label" for="github">GitHub</label>
-                        <input class="fill__input js-inputGitHub" type="text" name="github" id="github" placeholder="Ej: github.com/sally-hill" />
+                        <input class="fill__input js-inputGitHub" type="text" name="github" id="github"
+                            placeholder="Ej: github.com/sally-hill" />
                     </section>
                 </fieldset>
                 <!-- share form html structure -->
@@ -177,6 +184,7 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+
 </body>
 
 </html>
