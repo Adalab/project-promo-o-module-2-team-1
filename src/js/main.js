@@ -15,6 +15,7 @@ const elementIcon3 = document.querySelector('.js-iconShare');
 const labelPalettes = document.querySelectorAll('.js-labelPalette');
 const borderPalette = document.querySelector('.js-borderPalette');
 const linksIcons = document.querySelectorAll('.js-linksIcons');
+const resetBtn = document.querySelector('.js-resetBtn');
 
 // funciones manejadoras
 
@@ -161,24 +162,28 @@ inputGitHub.addEventListener('keyup', handlerInputGitHub);
 
 //Palettes
 
+function setPalette1() {
+  cardName.classList.remove('cards__title--palette2');
+  cardName.classList.remove('cards__title--palette3');
+  cardName.classList.add('cards__title--palette1');
+  cardOccupation.classList.remove('cards__subtitle--palette2');
+  cardOccupation.classList.remove('cards__subtitle--palette3');
+  cardOccupation.classList.add('cards__subtitle--palette1');
+  borderPalette.classList.remove('cards__wrapper--palette2');
+  borderPalette.classList.remove('cards__wrapper--palette3');
+  borderPalette.classList.add('cards__wrapper--palette1');
+  for (const link of linksIcons) {
+    link.classList.remove('cards__link--palette2');
+    link.classList.remove('cards__link--palette3');
+    link.classList.add('cards__link--palette1');
+  }
+}
+
+
 function handlerClickPalette(event) {
   console.log(event.currentTarget);
   if (event.currentTarget.id === 'palette1') {
-    cardName.classList.remove('cards__title--palette2');
-    cardName.classList.remove('cards__title--palette3');
-    cardName.classList.add('cards__title--palette1');
-    cardOccupation.classList.remove('cards__subtitle--palette2');
-    cardOccupation.classList.remove('cards__subtitle--palette3');
-    cardOccupation.classList.add('cards__subtitle--palette1');
-    borderPalette.classList.remove('cards__wrapper--palette2');
-    borderPalette.classList.remove('cards__wrapper--palette3');
-    borderPalette.classList.add('cards__wrapper--palette1');
-    for (const link of linksIcons) {
-      link.classList.remove('cards__link--palette2');
-      link.classList.remove('cards__link--palette3');
-      link.classList.add('cards__link--palette1');
-    }
-
+    setPalette1();
   } else if (event.currentTarget.id === 'palette2') {
     cardName.classList.remove('cards__title--palette1');
     cardName.classList.remove('cards__title--palette3');
@@ -218,3 +223,30 @@ for (const palette of labelPalettes) {
   palette.addEventListener('click', handlerClickPalette);
 }
 
+// Restablecer formulario
+
+function handleResetBtn() {
+  //event.preventDefault();
+  inputName.value = '';
+  inputOccupation.value = '';
+  phoneInput.value = '';
+  phonePreview.href = '';
+  phonePreview.title = 'Teléfono';
+  inputEmail.value = '';
+  previewEmail.href = '';
+  previewEmail.title = 'Email';
+  inputLinkedin.value = '';
+  cardLinkedin.href = '';
+  cardLinkedin.title = 'LinkedIn';
+  inputGitHub.value = '';
+  cardGitHub.href = '';
+  cardGitHub.title = 'GitHub';
+  profileImage.style.backgroundImage = `url('http://www.fillmurray.com/240/200')`;
+  profilePreview.style.backgroundImage = 'none';
+  handlerInputName();
+  handlerInputOccupation();
+  setPalette1();
+}
+
+
+resetBtn.addEventListener('click', handleResetBtn);
