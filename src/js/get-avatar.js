@@ -8,13 +8,13 @@ const profilePreview = document.querySelector('.js__profile-preview');
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
- * y lo carga en nuestro objeto FileReader para que 
+ * y lo carga en nuestro objeto FileReader para que
  * lo convierta a algo con lo que podamos trabajar.
  * Añade un listener al FR para que ejecute una función
  * al tener los datos listos
- * @param {evento} e 
+ * @param {evento} e
  */
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
@@ -41,7 +41,7 @@ function writeImage() {
  * que está oculto
  */
 function fakeFileClick() {
- fileField.click(); 
+  fileField.click();
 }
 
 /**

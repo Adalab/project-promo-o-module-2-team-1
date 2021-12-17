@@ -1,28 +1,45 @@
 'use strict';
 
 
-// obtener elementos html
+// get html elements
 
+// fieldset legends
 const elementLegend1 = document.querySelector('.js-legendDesign');
-const elementSection1 = document.querySelector('.js-sectionDesign');
-const elementIcon1 = document.querySelector('.js-iconDesign');
 const elementLegend2 = document.querySelector('.js-legendFill');
-const elementSection2 = document.querySelector('.js-sectionFill');
-const elementIcon2 = document.querySelector('.js-iconFill');
 const elementLegend3 = document.querySelector('.js-legendShare');
+// fieldset sections
+const elementSection1 = document.querySelector('.js-sectionDesign');
+const elementSection2 = document.querySelector('.js-sectionFill');
 const elementSection3 = document.querySelector('.js-sectionShare');
+// fieldset icons
+const elementIcon1 = document.querySelector('.js-iconDesign');
+const elementIcon2 = document.querySelector('.js-iconFill');
 const elementIcon3 = document.querySelector('.js-iconShare');
+// form fields
 const labelPalettes = document.querySelectorAll('.js-labelPalette');
+const inputName = document.querySelector('.js-name');
+const inputOccupation = document.querySelector('.js-occupation');
+const phoneInput = document.querySelector('.js-fill_phone');
+const inputEmail = document.querySelector('.js-inputEmail');
+const inputLinkedin = document.querySelector('.js-inputLinkedin');
+const inputGitHub = document.querySelector('.js-inputGitHub');
+// preview elements
+const cardName = document.querySelector('.js-cardName');
+const cardOccupation = document.querySelector('.js-cardOccupation');
+const phonePreview = document.querySelector('.js-phonePreview');
+const previewEmail = document.querySelector('.js-previewEmail');
 const borderPalette = document.querySelector('.js-borderPalette');
 const linksIcons = document.querySelectorAll('.js-linksIcons');
+const cardLinkedin = document.querySelector('.js-cardLinkedin');
+const cardGitHub = document.querySelector('.js-cardGitHub');
+// buttons
 const resetBtn = document.querySelector('.js-resetBtn');
 
-// funciones manejadoras
+
+// collapsed/expanded sections (design, fill and share)
 
 function handlerClickLegend() {
   elementSection1.classList.toggle('hidden');
-  // console.log(elementSection1.classList.contains('hidden'));
-
   if (elementSection1.classList.contains('hidden')) {
     elementIcon1.classList.remove('fa-chevron-up');
     elementIcon1.classList.add('fa-chevron-down');
@@ -72,18 +89,12 @@ function handlerClickLegend3() {
   }
 }
 
-
-// escuchar y manejar evento
-
 elementLegend1.addEventListener('click', handlerClickLegend);
 elementLegend2.addEventListener('click', handlerClickLegend2);
 elementLegend3.addEventListener('click', handlerClickLegend3);
 
 
-// formulario: nombre completo
-
-const inputName = document.querySelector('.js-name');
-const cardName = document.querySelector('.js-cardName');
+// form: full name
 
 function handlerInputName() {
   if (inputName.value === '') {
@@ -96,10 +107,7 @@ function handlerInputName() {
 inputName.addEventListener('keyup', handlerInputName);
 
 
-// formulario: puesto
-
-const inputOccupation = document.querySelector('.js-occupation');
-const cardOccupation = document.querySelector('.js-cardOccupation');
+// form: job
 
 function handlerInputOccupation() {
   if (inputOccupation.value === '') {
@@ -112,10 +120,7 @@ function handlerInputOccupation() {
 inputOccupation.addEventListener('keyup', handlerInputOccupation);
 
 
-// formulario: teléfono
-
-const phoneInput = document.querySelector('.js-fill_phone');
-const phonePreview = document.querySelector('.js-phonePreview');
+// form: phone
 
 function handlerPreviewPhone() {
   phoneInput.value;
@@ -126,26 +131,17 @@ function handlerPreviewPhone() {
 phoneInput.addEventListener('keyup', handlerPreviewPhone);
 
 
-// formulario: email
-
-const inputEmail = document.querySelector('.js-inputEmail');
-const previewEmail = document.querySelector('.js-previewEmail');
+// form: email
 
 function handleKeyEmail() {
-  const valueInputEmail = inputEmail.value;
-  previewEmail.href = `mailto:${valueInputEmail}`;
-  previewEmail.title = `Email: ${valueInputEmail}`;
+  previewEmail.href = `mailto:${inputEmail.value}`;
+  previewEmail.title = `Email: ${inputEmail.value}`;
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
 
 
-// formulario: enlaces
-
-const inputLinkedin = document.querySelector('.js-inputLinkedin');
-const inputGitHub = document.querySelector('.js-inputGitHub');
-const cardLinkedin = document.querySelector('.js-cardLinkedin');
-const cardGitHub = document.querySelector('.js-cardGitHub');
+// form: links
 
 function handlerInputLinkedin() {
   cardLinkedin.href = inputLinkedin.value;
@@ -160,7 +156,8 @@ function handlerInputGitHub() {
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
 inputGitHub.addEventListener('keyup', handlerInputGitHub);
 
-//Palettes
+
+// color palettes
 
 function setPalette1() {
   cardName.classList.remove('cards__title--palette2');
@@ -179,74 +176,87 @@ function setPalette1() {
   }
 }
 
+function setPalette2() {
+  cardName.classList.remove('cards__title--palette1');
+  cardName.classList.remove('cards__title--palette3');
+  cardName.classList.add('cards__title--palette2');
+  cardOccupation.classList.remove('cards__subtitle--palette1');
+  cardOccupation.classList.remove('cards__subtitle--palette3');
+  cardOccupation.classList.add('cards__subtitle--palette2');
+  borderPalette.classList.remove('cards__wrapper--palette1');
+  borderPalette.classList.remove('cards__wrapper--palette3');
+  borderPalette.classList.add('cards__wrapper--palette2');
+  for (const link of linksIcons) {
+    link.classList.remove('cards__link--palette1');
+    link.classList.remove('cards__link--palette3');
+    link.classList.add('cards__link--palette2');
+  }
+}
+
+function setPalette3() {
+  cardName.classList.remove('cards__title--palette1');
+  cardName.classList.remove('cards__title--palette2');
+  cardName.classList.add('cards__title--palette3');
+  cardOccupation.classList.remove('cards__subtitle--palette1');
+  cardOccupation.classList.remove('cards__subtitle--palette2');
+  cardOccupation.classList.add('cards__subtitle--palette3');
+  borderPalette.classList.remove('cards__wrapper--palette1');
+  borderPalette.classList.remove('cards__wrapper--palette2');
+  borderPalette.classList.add('cards__wrapper--palette3');
+  for (const link of linksIcons) {
+    link.classList.remove('cards__link--palette1');
+    link.classList.remove('cards__link--palette2');
+    link.classList.add('cards__link--palette3');
+  }
+}
 
 function handlerClickPalette(event) {
-  console.log(event.currentTarget);
   if (event.currentTarget.id === 'palette1') {
     setPalette1();
   } else if (event.currentTarget.id === 'palette2') {
-    cardName.classList.remove('cards__title--palette1');
-    cardName.classList.remove('cards__title--palette3');
-    cardName.classList.add('cards__title--palette2');
-    cardOccupation.classList.remove('cards__subtitle--palette1');
-    cardOccupation.classList.remove('cards__subtitle--palette3');
-    cardOccupation.classList.add('cards__subtitle--palette2');
-    borderPalette.classList.remove('cards__wrapper--palette1');
-    borderPalette.classList.remove('cards__wrapper--palette3');
-    borderPalette.classList.add('cards__wrapper--palette2');
-    //INCLUIR FOR PARA RECORRER ARRAY
-    for (const link of linksIcons) {
-      link.classList.remove('cards__link--palette1');
-      link.classList.remove('cards__link--palette3');
-      link.classList.add('cards__link--palette2');
-    }
+    setPalette2();
   } else if (event.currentTarget.id === 'palette3') {
-    cardName.classList.remove('cards__title--palette1');
-    cardName.classList.remove('cards__title--palette2');
-    cardName.classList.add('cards__title--palette3');
-    cardOccupation.classList.remove('cards__subtitle--palette1');
-    cardOccupation.classList.remove('cards__subtitle--palette2');
-    cardOccupation.classList.add('cards__subtitle--palette3');
-    borderPalette.classList.remove('cards__wrapper--palette1');
-    borderPalette.classList.remove('cards__wrapper--palette2');
-    borderPalette.classList.add('cards__wrapper--palette3');
-    for (const link of linksIcons) {
-      link.classList.remove('cards__link--palette1');
-      link.classList.remove('cards__link--palette2');
-      link.classList.add('cards__link--palette3');
-    }
+    setPalette3();
   }
-
 }
 
 for (const palette of labelPalettes) {
   palette.addEventListener('click', handlerClickPalette);
 }
 
-// Restablecer formulario
+
+// reset button
 
 function handleResetBtn() {
-  //event.preventDefault();
+  // reset full name
   inputName.value = '';
+  handlerInputName();
+  // reset job
   inputOccupation.value = '';
+  handlerInputOccupation();
+  // reset phone
   phoneInput.value = '';
   phonePreview.href = '';
   phonePreview.title = 'Teléfono';
+  // reset email
   inputEmail.value = '';
   previewEmail.href = '';
   previewEmail.title = 'Email';
+  // reset linkedin link
   inputLinkedin.value = '';
   cardLinkedin.href = '';
   cardLinkedin.title = 'LinkedIn';
+  // reset github link
   inputGitHub.value = '';
   cardGitHub.href = '';
   cardGitHub.title = 'GitHub';
-  profileImage.style.backgroundImage = `url('http://www.fillmurray.com/240/200')`;
+  // reset image
+  profileImage.style.backgroundImage = 'url(../assets/images/profile-image.svg)';
   profilePreview.style.backgroundImage = 'none';
-  handlerInputName();
-  handlerInputOccupation();
+  // reset palettes
   setPalette1();
+  elementSection1.classList.add('hidden');
+  handlerClickLegend();
 }
-
 
 resetBtn.addEventListener('click', handleResetBtn);
