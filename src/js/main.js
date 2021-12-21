@@ -94,14 +94,27 @@ elementLegend2.addEventListener('click', handlerClickLegend2);
 elementLegend3.addEventListener('click', handlerClickLegend3);
 
 
+
+const data = {
+  name: '',
+  job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+  palette: 1,
+}
+
 // form: full name
 
 function handlerInputName() {
   if (inputName.value === '') {
-    cardName.innerHTML = 'Nombre Apellido';
+    data.name = 'Nombre Apellido';
   } else {
-    cardName.innerHTML = inputName.value.toLowerCase();
+    data.name = inputName.value;
   }
+  cardName.innerHTML = data.name.toLowerCase();
 }
 
 inputName.addEventListener('keyup', handlerInputName);
@@ -111,10 +124,11 @@ inputName.addEventListener('keyup', handlerInputName);
 
 function handlerInputOccupation() {
   if (inputOccupation.value === '') {
-    cardOccupation.innerHTML = 'Front-end developer';
+    data.job = 'Front-end developer';
   } else {
-    cardOccupation.innerHTML = inputOccupation.value.toLowerCase();
+    data.job = inputOccupation.value;
   }
+  cardOccupation.innerHTML = data.job.toLowerCase();
 }
 
 inputOccupation.addEventListener('keyup', handlerInputOccupation);
@@ -123,9 +137,16 @@ inputOccupation.addEventListener('keyup', handlerInputOccupation);
 // form: phone
 
 function handlerPreviewPhone() {
-  phoneInput.value;
-  phonePreview.href = `tel:${phoneInput.value}`;
-  phonePreview.title = `Teléfono: ${phoneInput.value}`;
+  data.phone = phoneInput.value;
+  if (data.phone === '') {
+    phonePreview.href = '';
+    phonePreview.title = `Teléfono`;
+  } else {
+
+    phonePreview.href = `tel:${data.phone}`;
+    phonePreview.title = `Teléfono: ${data.phone}`;
+
+  }
 }
 
 phoneInput.addEventListener('keyup', handlerPreviewPhone);
@@ -134,8 +155,14 @@ phoneInput.addEventListener('keyup', handlerPreviewPhone);
 // form: email
 
 function handleKeyEmail() {
-  previewEmail.href = `mailto:${inputEmail.value}`;
-  previewEmail.title = `Email: ${inputEmail.value}`;
+  data.email = inputEmail.value;
+  if (data.email === '') {
+    previewEmail.href = '';
+    previewEmail.title = `Email`;
+  } else {
+    previewEmail.href = `mailto:${data.email}`;
+    previewEmail.title = `Email: ${data.email}`;
+  }
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
@@ -144,13 +171,24 @@ inputEmail.addEventListener('keyup', handleKeyEmail);
 // form: links
 
 function handlerInputLinkedin() {
-  cardLinkedin.href = inputLinkedin.value;
-  cardLinkedin.title = `LinkedIn: ${inputLinkedin.value}`;
+  data.linkedin = inputLinkedin.value;
+  if (data.linkedin === '') {
+    cardLinkedin.href = '';
+    cardLinkedin.title = `LinkedIn`;
+  } else {
+    cardLinkedin.href = data.linkedin;
+    cardLinkedin.title = `LinkedIn: ${data.linkedin}`;
+  }
 }
 
 function handlerInputGitHub() {
-  cardGitHub.href = inputGitHub.value;
-  cardGitHub.title = `GitHub: ${inputGitHub.value}`;
+  data.github = inputGitHub.value;
+  if (data.github === '') {
+    cardGitHub.href = '';
+    cardGitHub.title = `GitHub`;
+  } else
+    cardGitHub.href = data.github;
+  cardGitHub.title = `GitHub: ${data.github}`;
 }
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
@@ -230,23 +268,29 @@ for (const palette of labelPalettes) {
 function handleResetBtn() {
   // reset full name
   inputName.value = '';
-  handlerInputName();
+  data.name = '';
+  cardName.innerHTML = 'Nombre Apellido';
   // reset job
   inputOccupation.value = '';
-  handlerInputOccupation();
+  data.job = '';
+  cardOccupation.innerHTML = 'Front-end developer';
   // reset phone
+  data.phone = '';
   phoneInput.value = '';
   phonePreview.href = '';
   phonePreview.title = 'Teléfono';
   // reset email
+  data.email = '';
   inputEmail.value = '';
   previewEmail.href = '';
   previewEmail.title = 'Email';
   // reset linkedin link
+  data.linkedin = '';
   inputLinkedin.value = '';
   cardLinkedin.href = '';
   cardLinkedin.title = 'LinkedIn';
   // reset github link
+  data.github = '';
   inputGitHub.value = '';
   cardGitHub.href = '';
   cardGitHub.title = 'GitHub';
