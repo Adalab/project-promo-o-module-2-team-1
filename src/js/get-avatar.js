@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 const fr = new FileReader();
@@ -33,6 +34,8 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+
+  data.photo = fr.result;
 }
 
 
@@ -40,9 +43,12 @@ function writeImage() {
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
  */
+
+/*
 function fakeFileClick() {
   fileField.click();
 }
+*/
 
 /**
  * Añadimos los listeners necesarios:
