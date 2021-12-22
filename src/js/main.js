@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 
@@ -94,7 +95,7 @@ elementLegend2.addEventListener('click', handlerClickLegend2);
 elementLegend3.addEventListener('click', handlerClickLegend3);
 
 
-
+// data object
 const data = {
   name: '',
   job: '',
@@ -105,6 +106,7 @@ const data = {
   photo: '',
   palette: 1,
 };
+
 
 // form: full name
 
@@ -141,7 +143,7 @@ function handlerPreviewPhone() {
   data.phone = phoneInput.value;
   if (data.phone === '') {
     phonePreview.href = '';
-    phonePreview.title = `Teléfono`;
+    phonePreview.title = 'Teléfono';
   } else {
 
     phonePreview.href = `tel:${data.phone}`;
@@ -159,7 +161,7 @@ function handleKeyEmail() {
   data.email = inputEmail.value;
   if (data.email === '') {
     previewEmail.href = '';
-    previewEmail.title = `Email`;
+    previewEmail.title = 'Email';
   } else {
     previewEmail.href = `mailto:${data.email}`;
     previewEmail.title = `Email: ${data.email}`;
@@ -175,7 +177,7 @@ function handlerInputLinkedin() {
   data.linkedin = inputLinkedin.value;
   if (data.linkedin === '') {
     cardLinkedin.href = '';
-    cardLinkedin.title = `LinkedIn`;
+    cardLinkedin.title = 'LinkedIn';
   } else {
     cardLinkedin.href = data.linkedin;
     cardLinkedin.title = `LinkedIn: ${data.linkedin}`;
@@ -186,13 +188,12 @@ function handlerInputGitHub() {
   data.github = inputGitHub.value;
   if (data.github === '') {
     cardGitHub.href = '';
-    cardGitHub.title = `GitHub`;
-  }else {
+    cardGitHub.title = 'GitHub';
+  } else {
     cardGitHub.href = data.github;
     cardGitHub.title = `GitHub: ${data.github}`;
+  }
 }
-}
-
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
 inputGitHub.addEventListener('keyup', handlerInputGitHub);
@@ -313,37 +314,28 @@ function handleResetBtn() {
 resetBtn.addEventListener('click', handleResetBtn);
 
 
-// Seccion Comparte
+// share button
 
 const shareBtn = document.querySelector('.js-shareBtn');
 const shareLink = document.querySelector('.js-shareLink');
 const shareDone = document.querySelector('.js-shareDone');
 const shareError = document.querySelector('.js-shareError');
 
-function handlerClickShare(event){
+function handlerClickShare(event) {
   event.preventDefault();
-  fetch('https://awesome-profile-cards.herokuapp.com/card' , {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'content-Type': 'application/json'
-    }
-  })
-  .then( response => response.json())
-  .then( dataApi => {
-    console.log(dataApi.success);
-    console.log(dataApi);
-    if(dataApi.success === true){
-      shareLink.innerHTML = 'Haz click aquí para ver tu tarjeta';
-      shareLink.href = dataApi.cardURL;
-      shareDone.classList.remove('hidden');
-      shareError.classList.add('hidden');
-    }else{
-      shareDone.classList.add('hidden');
-      shareError.classList.remove('hidden');
-    }
-  });
-  
+  fetch('https://awesome-profile-cards.herokuapp.com/card', { method: 'POST', body: JSON.stringify(data), headers: { 'content-Type': 'application/json' } })
+    .then(response => response.json())
+    .then(dataApi => {
+      if (dataApi.success === true) {
+        shareLink.innerHTML = 'Haz click aquí para ver tu tarjeta';
+        shareLink.href = dataApi.cardURL;
+        shareDone.classList.remove('hidden');
+        shareError.classList.add('hidden');
+      } else {
+        shareDone.classList.add('hidden');
+        shareError.classList.remove('hidden');
+      }
+    });
 }
 
 shareBtn.addEventListener('click', handlerClickShare);
