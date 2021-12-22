@@ -314,3 +314,36 @@ resetBtn.addEventListener('click', handleResetBtn);
 
 
 // Seccion Comparte
+
+const shareBtn = document.querySelector('.js-shareBtn');
+const shareLink = document.querySelector('.js-shareLink');
+const shareDone = document.querySelector('.js-shareDone');
+const shareError = document.querySelector('.js-shareError');
+
+function handlerClickShare(event){
+  event.preventDefault();
+  fetch('https://awesome-profile-cards.herokuapp.com/card' , {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'content-Type': 'application/json'
+    }
+  })
+  .then( response => response.json())
+  .then( dataApi => {
+    console.log(dataApi.success);
+    console.log(dataApi);
+    if(dataApi.success === true){
+      shareLink.innerHTML = 'Haz click aquí para ver tu tarjeta';
+      shareLink.href = dataApi.cardURL;
+      shareDone.classList.remove('hidden');
+      shareError.classList.add('hidden');
+    }else{
+      shareDone.classList.add('hidden');
+      shareError.classList.remove('hidden');
+    }
+  });
+  
+}
+
+shareBtn.addEventListener('click', handlerClickShare);

@@ -10,18 +10,19 @@
 
     <section class="box__main share__section js-sectionShare hidden">
         <div class="share__main">
-            <button class="share__button hidden" type="submit"><i class="far fa-address-card"></i>Crear
-                tarjeta</button>
-            <button class="share__button share__button--disabled" disabled type="submit"><i
+            <button class="js-shareBtn share__button" type="submit"><i
                     class="far fa-address-card"></i>Crear
                 tarjeta</button>
         </div>
 
-        <div class="share__done">
+        <div class="js-shareDone share__done hidden">
             <p class="share__text">La tarjeta ha sido creada:</p>
-            <a class="share__link" href="#">Your URL will be placed here!</a>
+            <a class="js-shareLink share__link" href="#" target="_blank">Your URL will be placed here!</a>
             <button class="share__button share__button--twitter"><i class="fab fa-twitter"></i>Compartir en
                 twitter</button>
+        </div>
+        <div class="js-shareError share__done--error hidden">
+            <p class="share__text">ERROR, te faltan campos por rellenar</p>
         </div>
     </section>
 </fieldset>
