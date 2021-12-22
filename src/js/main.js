@@ -104,7 +104,7 @@ const data = {
   github: '',
   photo: '',
   palette: 1,
-}
+};
 
 // form: full name
 
@@ -113,6 +113,7 @@ function handlerInputName() {
     data.name = 'Nombre Apellido';
   } else {
     data.name = inputName.value;
+
   }
   cardName.innerHTML = data.name.toLowerCase();
 }
@@ -186,10 +187,12 @@ function handlerInputGitHub() {
   if (data.github === '') {
     cardGitHub.href = '';
     cardGitHub.title = `GitHub`;
-  } else
+  }else {
     cardGitHub.href = data.github;
-  cardGitHub.title = `GitHub: ${data.github}`;
+    cardGitHub.title = `GitHub: ${data.github}`;
 }
+}
+
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
 inputGitHub.addEventListener('keyup', handlerInputGitHub);
@@ -198,6 +201,7 @@ inputGitHub.addEventListener('keyup', handlerInputGitHub);
 // color palettes
 
 function setPalette1() {
+  data.palette = 1;
   cardName.classList.remove('cards__title--palette2');
   cardName.classList.remove('cards__title--palette3');
   cardName.classList.add('cards__title--palette1');
@@ -215,6 +219,7 @@ function setPalette1() {
 }
 
 function setPalette2() {
+  data.palette = 2;
   cardName.classList.remove('cards__title--palette1');
   cardName.classList.remove('cards__title--palette3');
   cardName.classList.add('cards__title--palette2');
@@ -232,6 +237,7 @@ function setPalette2() {
 }
 
 function setPalette3() {
+  data.palette = 3;
   cardName.classList.remove('cards__title--palette1');
   cardName.classList.remove('cards__title--palette2');
   cardName.classList.add('cards__title--palette3');
@@ -295,6 +301,7 @@ function handleResetBtn() {
   cardGitHub.href = '';
   cardGitHub.title = 'GitHub';
   // reset image
+  data.photo = '';
   profileImage.style.backgroundImage = 'url(./assets/images/profile-image.svg)';
   profilePreview.style.backgroundImage = 'none';
   // reset palettes
@@ -304,3 +311,6 @@ function handleResetBtn() {
 }
 
 resetBtn.addEventListener('click', handleResetBtn);
+
+
+// Seccion Comparte
