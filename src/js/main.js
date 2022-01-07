@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 'use strict';
 
-
 // get html elements
 
 // fieldset legends
@@ -35,7 +34,83 @@ const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 // buttons
 const resetBtn = document.querySelector('.js-resetBtn');
+const shareBtn = document.querySelector('.js-shareBtn');
+const shareLink = document.querySelector('.js-shareLink');
+const shareDone = document.querySelector('.js-shareDone');
+const shareError = document.querySelector('.js-shareError');
+const shareTwitter = document.querySelector('.js-shareTwitter');
 
+// data object
+let data = {
+  name: '',
+  job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+  palette: 1,
+};
+
+// local storage
+
+const dataLS = JSON.parse(localStorage.getItem('data'));
+if (dataLS) {
+  data = dataLS;
+}
+
+inputName.value = data.name;
+if (data.name === '') {
+  cardName.innerHTML = 'Nombre Apellido';
+} else {
+  cardName.innerHTML = data.name.toLowerCase();
+}
+
+inputOccupation.value = data.job;
+if (data.job === '') {
+  cardOccupation.innerHTML = 'Front-end developer';
+} else {
+  cardOccupation.innerHTML = data.job.toLowerCase();
+}
+
+phoneInput.value = data.phone;
+if (data.phone !== '') {
+  phonePreview.href = `tel:${data.phone}`;
+  phonePreview.title = `Teléfono: ${data.phone}`;
+}
+
+inputEmail.value = data.email;
+if (data.email !== '') {
+  previewEmail.href = `mailto:${data.email}`;
+  previewEmail.title = `Email: ${data.email}`;
+}
+
+inputLinkedin.value = data.linkedin;
+if (data.linkedin !== '') {
+  cardLinkedin.href = data.linkedin;
+  cardLinkedin.title = `LinkedIn: ${data.linkedin}`;
+}
+
+inputGitHub.value = data.github;
+if (data.github !== '') {
+  cardGitHub.href = data.github;
+  cardGitHub.title = `GitHub: ${data.github}`;
+}
+
+if (data.photo !== '') {
+  profileImage.style.backgroundImage = `url(${data.photo})`;
+  profilePreview.style.backgroundImage = `url(${data.photo})`;
+}
+
+if (data.palette === 2) {
+  setPalette2();
+  const palette2Element = document.querySelector('#palette2');
+  palette2Element.checked = true;
+} else if (data.palette === 3) {
+  setPalette3();
+  const palette3Element = document.querySelector('#palette3');
+  palette3Element.checked = true;
+}
 
 // collapsed/expanded sections (design, fill and share)
 
@@ -88,54 +163,54 @@ function handlerClickLegend3() {
     elementIcon2.classList.remove('fa-chevron-up');
     elementIcon2.classList.add('fa-chevron-down');
   }
+
+  // form validation
+  let counter = 0;
+  for (const item in data) {
+    if (data[item] !== '' && item !== 'phone') {
+      counter++;
+    }
+  }
+  if (counter === 7) {
+    shareBtn.classList.remove('share__button--disabled');
+    shareBtn.disabled = false;
+  } else {
+    shareBtn.classList.add('share__button--disabled');
+    shareBtn.disabled = true;
+  }
 }
 
 elementLegend1.addEventListener('click', handlerClickLegend);
 elementLegend2.addEventListener('click', handlerClickLegend2);
 elementLegend3.addEventListener('click', handlerClickLegend3);
 
-
-// data object
-const data = {
-  name: '',
-  job: '',
-  email: '',
-  phone: '',
-  linkedin: '',
-  github: '',
-  photo: '',
-  palette: 1,
-};
-
-
 // form: full name
 
 function handlerInputName() {
   if (inputName.value === '') {
-    data.name = 'Nombre Apellido';
+    data.name = '';
+    cardName.innerHTML = 'Nombre Apellido';
   } else {
     data.name = inputName.value;
-
+    cardName.innerHTML = data.name.toLowerCase();
   }
-  cardName.innerHTML = data.name.toLowerCase();
+  localStorage.setItem('data', JSON.stringify(data));
 }
-
-inputName.addEventListener('keyup', handlerInputName);
-
+inputName.addEventListener('input', handlerInputName);
 
 // form: job
 
 function handlerInputOccupation() {
   if (inputOccupation.value === '') {
-    data.job = 'Front-end developer';
+    data.job = '';
+    cardOccupation.innerHTML = 'Front-end developer';
   } else {
     data.job = inputOccupation.value;
+    cardOccupation.innerHTML = data.job.toLowerCase();
   }
-  cardOccupation.innerHTML = data.job.toLowerCase();
+  localStorage.setItem('data', JSON.stringify(data));
 }
-
 inputOccupation.addEventListener('keyup', handlerInputOccupation);
-
 
 // form: phone
 
@@ -145,15 +220,13 @@ function handlerPreviewPhone() {
     phonePreview.href = '';
     phonePreview.title = 'Teléfono';
   } else {
-
     phonePreview.href = `tel:${data.phone}`;
     phonePreview.title = `Teléfono: ${data.phone}`;
-
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 phoneInput.addEventListener('keyup', handlerPreviewPhone);
-
 
 // form: email
 
@@ -166,10 +239,10 @@ function handleKeyEmail() {
     previewEmail.href = `mailto:${data.email}`;
     previewEmail.title = `Email: ${data.email}`;
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 inputEmail.addEventListener('keyup', handleKeyEmail);
-
 
 // form: links
 
@@ -182,6 +255,7 @@ function handlerInputLinkedin() {
     cardLinkedin.href = data.linkedin;
     cardLinkedin.title = `LinkedIn: ${data.linkedin}`;
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 function handlerInputGitHub() {
@@ -193,11 +267,11 @@ function handlerInputGitHub() {
     cardGitHub.href = data.github;
     cardGitHub.title = `GitHub: ${data.github}`;
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 inputLinkedin.addEventListener('keyup', handlerInputLinkedin);
 inputGitHub.addEventListener('keyup', handlerInputGitHub);
-
 
 // color palettes
 
@@ -217,6 +291,7 @@ function setPalette1() {
     link.classList.remove('cards__link--palette3');
     link.classList.add('cards__link--palette1');
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 function setPalette2() {
@@ -235,6 +310,7 @@ function setPalette2() {
     link.classList.remove('cards__link--palette3');
     link.classList.add('cards__link--palette2');
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 function setPalette3() {
@@ -253,6 +329,7 @@ function setPalette3() {
     link.classList.remove('cards__link--palette2');
     link.classList.add('cards__link--palette3');
   }
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 function handlerClickPalette(event) {
@@ -268,7 +345,6 @@ function handlerClickPalette(event) {
 for (const palette of labelPalettes) {
   palette.addEventListener('click', handlerClickPalette);
 }
-
 
 // reset button
 
@@ -309,28 +385,28 @@ function handleResetBtn() {
   setPalette1();
   elementSection1.classList.add('hidden');
   handlerClickLegend();
+  localStorage.removeItem('data');
 }
 
 resetBtn.addEventListener('click', handleResetBtn);
 
-
 // share button
-
-const shareBtn = document.querySelector('.js-shareBtn');
-const shareLink = document.querySelector('.js-shareLink');
-const shareDone = document.querySelector('.js-shareDone');
-const shareError = document.querySelector('.js-shareError');
 
 function handlerClickShare(event) {
   event.preventDefault();
-  fetch('https://awesome-profile-cards.herokuapp.com/card', { method: 'POST', body: JSON.stringify(data), headers: { 'content-Type': 'application/json' } })
-    .then(response => response.json())
-    .then(dataApi => {
+  fetch('https://awesome-profile-cards.herokuapp.com/card', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'content-Type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .then((dataApi) => {
       if (dataApi.success === true) {
         shareLink.innerHTML = 'Haz click aquí para ver tu tarjeta';
         shareLink.href = dataApi.cardURL;
         shareDone.classList.remove('hidden');
         shareError.classList.add('hidden');
+        shareTwitter.href = `https://twitter.com/intent/tweet?text=He%20creado%20mi%20tarjeta%20de%20visita%20gracias%20a%20%23TeamUndefined:%20${dataApi.cardURL}`;
       } else {
         shareDone.classList.add('hidden');
         shareError.classList.remove('hidden');

@@ -6,7 +6,6 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
-
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -20,7 +19,6 @@ function getImage(e) {
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -36,8 +34,8 @@ function writeImage() {
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 
   data.photo = fr.result;
+  localStorage.setItem('data', JSON.stringify(data));
 }
-
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"

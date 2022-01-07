@@ -56,56 +56,73 @@
             <div class="form__fieldsets">
                 <!-- design form html structure -->
                 <fieldset class="box design">
-                    <legend class="js-legendDesign box__header">
-                        <div class="box__wrapper">
-                            <i class="far fa-object-ungroup box__icon"></i>
-                            <h2 class="box__title">Diseña</h2>
-                        </div>
-                        <i class="js-iconDesign fas fa-chevron-up box__arrow"></i>
-                    </legend>
+                  <legend class="js-legendDesign box__header">
+                    <div class="box__wrapper">
+                      <i class="far fa-object-ungroup box__icon"></i>
+                      <h2 class="box__title">Diseña</h2>
+                    </div>
+                    <i class="js-iconDesign fas fa-chevron-up box__arrow"></i>
+                  </legend>
 
-                    <section class="js-sectionDesign box__main design__section">
-                        <p class="design__text">Colores</p>
+                  <section class="js-sectionDesign box__main design__section">
+                    <p class="design__text">Colores</p>
 
-                        <div class="design__wrapper">
-                            <div class="design__option">
-                                <input type="radio" id="palette1" name="palette" class="js-labelPalette  design__input" checked />
+                    <div class="design__wrapper">
+                      <div class="design__option">
+                        <input
+                          type="radio"
+                          id="palette1"
+                          name="palette"
+                          class="js-labelPalette design__input"
+                          checked
+                        />
 
-                                <label for="palette1" class="design__label">
-                                    <ul class="design__list">
-                                        <li class="design__color palette1--color1"></li>
-                                        <li class="design__color palette1--color2"></li>
-                                        <li class="design__color palette1--color3"></li>
-                                    </ul>
-                                </label>
-                            </div>
+                        <label for="palette1" class="design__label">
+                          <ul class="design__list">
+                            <li class="design__color palette1--color1"></li>
+                            <li class="design__color palette1--color2"></li>
+                            <li class="design__color palette1--color3"></li>
+                          </ul>
+                        </label>
+                      </div>
 
-                            <div class="design__option">
-                                <input type="radio" id="palette2" name="palette" class="js-labelPalette design__input" />
+                      <div class="design__option">
+                        <input
+                          type="radio"
+                          id="palette2"
+                          name="palette"
+                          class="js-labelPalette design__input"
+                        />
 
-                                <label for="palette2" class="design__label">
-                                    <ul class="design__list">
-                                        <li class="design__color palette2--color1"></li>
-                                        <li class="design__color palette2--color2"></li>
-                                        <li class="design__color palette2--color3"></li>
-                                    </ul>
-                                </label>
-                            </div>
+                        <label for="palette2" class="design__label">
+                          <ul class="design__list">
+                            <li class="design__color palette2--color1"></li>
+                            <li class="design__color palette2--color2"></li>
+                            <li class="design__color palette2--color3"></li>
+                          </ul>
+                        </label>
+                      </div>
 
-                            <div class="design__option">
-                                <input type="radio" id="palette3" name="palette" class="js-labelPalette design__input" />
+                      <div class="design__option">
+                        <input
+                          type="radio"
+                          id="palette3"
+                          name="palette"
+                          class="js-labelPalette design__input"
+                        />
 
-                                <label for="palette3" class="design__label">
-                                    <ul class="design__list">
-                                        <li class="design__color palette3--color1"></li>
-                                        <li class="design__color palette3--color2"></li>
-                                        <li class="design__color palette3--color3"></li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                    </section>
+                        <label for="palette3" class="design__label">
+                          <ul class="design__list">
+                            <li class="design__color palette3--color1"></li>
+                            <li class="design__color palette3--color2"></li>
+                            <li class="design__color palette3--color3"></li>
+                          </ul>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
                 </fieldset>
+
                 <!-- fill form html structure -->
                 <fieldset class="box fill">
                     <legend class="box__header js-legendFill">
@@ -150,32 +167,41 @@
                 </fieldset>
                 <!-- share form html structure -->
                 <fieldset class="box share">
-                    <legend class="box__header js-legendShare">
-                        <div class="box__wrapper">
-                            <i class="fas fa-share-alt box__icon"></i>
-                            <h2 class="box__title">Comparte</h2>
-                        </div>
-                        <i class="fas fa-chevron-down box__arrow js-iconShare"></i>
-                    </legend>
+                  <legend class="box__header js-legendShare">
+                    <div class="box__wrapper">
+                      <i class="fas fa-share-alt box__icon"></i>
+                      <h2 class="box__title">Comparte</h2>
+                    </div>
+                    <i class="fas fa-chevron-down box__arrow js-iconShare"></i>
+                  </legend>
 
-                    <section class="box__main share__section js-sectionShare hidden">
-                        <div class="share__main">
-                            <button class="js-shareBtn share__button" type="submit"><i class="far fa-address-card"></i>Crear
-                                tarjeta</button>
-                        </div>
+                  <section class="box__main share__section js-sectionShare hidden">
+                    <div class="share__main">
+                      <button
+                        class="js-shareBtn share__button share__button--disabled"
+                        type="submit"
+                        disabled
+                      >
+                        <i class="far fa-address-card"></i>Crear tarjeta
+                      </button>
+                    </div>
 
-                        <div class="js-shareDone share__done hidden">
-                            <p class="share__text">La tarjeta ha sido creada:</p>
-                            <a class="js-shareLink share__link" href="#" target="_blank">Your URL will be placed here!</a>
-                            <button class="share__button share__button--twitter"><i class="fab fa-twitter"></i>Compartir en
-                                twitter</button>
-                        </div>
+                    <div class="js-shareDone share__done hidden">
+                      <p class="share__text">La tarjeta ha sido creada:</p>
+                      <a class="js-shareLink share__link" href="#" target="_blank"
+                        >Your URL will be placed here!</a
+                      >
+                      <a class="share__button share__button--twitter js-shareTwitter"
+                        ><i class="fab fa-twitter"></i>Compartir en twitter</a
+                      >
+                    </div>
 
-                        <div class="js-shareError share__done hidden">
-                            <p class="share__error">ERROR, te faltan campos por rellenar</p>
-                        </div>
-                    </section>
+                    <div class="js-shareError share__done hidden">
+                      <p class="share__error">ERROR, te faltan campos por rellenar</p>
+                    </div>
+                  </section>
                 </fieldset>
+
             </div>
         </form>
     </section>

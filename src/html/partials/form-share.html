@@ -1,28 +1,36 @@
 <!-- share form html structure -->
 <fieldset class="box share">
-    <legend class="box__header js-legendShare">
-        <div class="box__wrapper">
-            <i class="fas fa-share-alt box__icon"></i>
-            <h2 class="box__title">Comparte</h2>
-        </div>
-        <i class="fas fa-chevron-down box__arrow js-iconShare"></i>
-    </legend>
+  <legend class="box__header js-legendShare">
+    <div class="box__wrapper">
+      <i class="fas fa-share-alt box__icon"></i>
+      <h2 class="box__title">Comparte</h2>
+    </div>
+    <i class="fas fa-chevron-down box__arrow js-iconShare"></i>
+  </legend>
 
-    <section class="box__main share__section js-sectionShare hidden">
-        <div class="share__main">
-            <button class="js-shareBtn share__button" type="submit"><i class="far fa-address-card"></i>Crear
-                tarjeta</button>
-        </div>
+  <section class="box__main share__section js-sectionShare hidden">
+    <div class="share__main">
+      <button
+        class="js-shareBtn share__button share__button--disabled"
+        type="submit"
+        disabled
+      >
+        <i class="far fa-address-card"></i>Crear tarjeta
+      </button>
+    </div>
 
-        <div class="js-shareDone share__done hidden">
-            <p class="share__text">La tarjeta ha sido creada:</p>
-            <a class="js-shareLink share__link" href="#" target="_blank">Your URL will be placed here!</a>
-            <button class="share__button share__button--twitter"><i class="fab fa-twitter"></i>Compartir en
-                twitter</button>
-        </div>
+    <div class="js-shareDone share__done hidden">
+      <p class="share__text">La tarjeta ha sido creada:</p>
+      <a class="js-shareLink share__link" href="#" target="_blank"
+        >Your URL will be placed here!</a
+      >
+      <a class="share__button share__button--twitter js-shareTwitter"
+        ><i class="fab fa-twitter"></i>Compartir en twitter</a
+      >
+    </div>
 
-        <div class="js-shareError share__done hidden">
-            <p class="share__error">ERROR, te faltan campos por rellenar</p>
-        </div>
-    </section>
+    <div class="js-shareError share__done hidden">
+      <p class="share__error">ERROR, te faltan campos por rellenar</p>
+    </div>
+  </section>
 </fieldset>
